@@ -64,20 +64,21 @@ def get_topic_description(topic) -> str:
 # ─────────────────────────────────────────────
 
 def fetch_articles_for_topic(topic) -> list:
-    """Fetch up to 20 candidate articles from trusted sources within 24h (48h fallback)."""
+    """Fetch up to 20 candidate articles from trusted sources within 24h (72h fallback)."""
     topic_name = get_topic_name(topic)
     keywords   = get_topic_keywords(topic)
 
-    # Build query from first 6 keywords, up to 3 words each
-    terms = [" ".join(kw.strip().split()[:3]) for kw in keywords[:6]]
+    # Use keywords as-is (already short single-concept terms in config)
+    terms = [kw.strip() for kw in keywords[:8]]
     query = " OR ".join(terms)
+    print(f"    Query: {query}")
 
-    for hours_back in [24, 48]:
+    for hours_back in [24, 72]:
         try:
             params = {
                 "q":        query,
                 "language": "en",
-                "sortBy":   "relevancy",
+                "sortBy":   "publishedAt",
                 "pageSize": 20,
                 "from":     (datetime.now() - timedelta(hours=hours_back)).strftime("%Y-%m-%dT%H:%M:%S"),
             }
@@ -107,7 +108,7 @@ def fetch_articles_for_topic(topic) -> list:
                 print(f"  [{topic_name}] {len(articles)} candidates ({label})")
                 return articles
             elif hours_back == 24:
-                print(f"  [{topic_name}] Nothing in 24h, trying 48h...")
+                print(f"  [{topic_name}] Nothing in 24h, trying 72h...")
 
         except Exception as e:
             print(f"  Failed to fetch [{topic_name}]: {e}")
