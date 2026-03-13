@@ -1,21 +1,16 @@
 {
   "date": "2026-03-13",
-  "stories": [
+  "topics": [
     {
       "topic": "Global AI Governance",
-      "title": "What Causes Spontaneous Human Combustion?",
-      "url": "http://www.todayifoundout.com/index.php/2026/03/what-causes-spontaneous-human-combustion/"
-    },
-    {
-      "topic": "Future of Pedagogy & Education",
-      "title": "bazinga-indeed 5.5.2",
-      "url": "https://pypi.org/project/bazinga-indeed/5.5.2/"
-    },
-    {
-      "topic": "Socio-Economic Policy & Labor Impact",
-      "title": "Digital Marketing Agency Expands to Detroit, Michigan",
-      "url": "http://money.mymotherlode.com/clarkebroadcasting.mymotherlode/article/marketersmedia-2026-3-11-digital-marketing-agency-expands-to-detroit-michigan"
+      "stories": [
+        {
+          "title": "U.S. military is using AI to help plan Iran air attacks, sources say, as lawmakers call for oversight",
+          "source": "NBC News",
+          "url": "https://www.nbcnews.com/tech/tech-news/us-military-using-ai-help-plan-iran-air-attacks-sources-say-lawmakers-rcna262150"
+        }
+      ]
     }
   ],
-  "synthesis": "# What This Means for Human Dignity & Labor\n\nToday's stories are genuinely mixed signals. On one hand, we see AI tools becoming more accessible and locally owned\u2014the kind of technology that could reduce corporate gatekeeping and let ordinary people participate in the digital economy. The Detroit expansion suggests economic activity is still flowing to regions that need it. These movements could theoretically free people from pure performance metrics: if AI handles the functional work, humans might finally be valued for other things.\n\nBut there's a catch. The real shift toward intrinsic human worth only happens if society *chooses* to fund and protect it. Right now, we're mostly replacing human functional contribution without redistributing income or reinventing purpose. A marketing agency expanding to Detroit creates some jobs, yes\u2014but how many people does that one expansion actually employ compared to the AI systems replacing marketing roles elsewhere? The math is not encouraging.\n\nThe honest answer is that today's news neither accelerates nor slows this shift meaningfully. It simply continues the status quo: technology gets better, some local economies get pockets of investment, most people still live in a world where their economic survival depends on being useful. We're not yet seeing the policies, cultural changes, or economic structures that would genuinely decouple dignity from productivity.\n\n**One thing you can do:** Ask your local employer or school explicitly: \"What happens to people here when this process gets automated?\" Don't accept vague answers about \"retraining.\" Push for specifics. Honest answers about gaps in planning are more useful than optimistic silence."
+  "synthesis": "# What This Means for Human Dignity & Labor\n\nThe U.S. military's use of AI to plan Iran air attacks, as reported by NBC News, creates an immediate crisis for labor dignity: when autonomous systems make targeting decisions, human judgment\u2014the last refuge of moral accountability in lethal work\u2014becomes optional rather than essential. Lawmakers are calling for oversight, but the story's core finding reveals they are reacting *after* deployment has begun. This establishes a dangerous precedent: AI systems that strip humans of decision-making authority in high-stakes contexts operate first, get governed later. Workers in military, intelligence, and eventually civilian sectors face a future where their expertise and judgment are classified as inefficient bottlenecks rather than intrinsic sources of value.\n\nThis fracture in global AI governance directly undermines any emerging framework that might protect labor. The regulatory vacuum NBC identified\u2014where \"autonomous decision-making in lethal contexts proceeds ahead of any meaningful international framework\"\u2014means there is no binding standard preventing the logic of AI efficiency from colonizing any sector. Once a military establishment successfully argues that human judgment slows critical operations, that same argument migrates to hospitals, courtrooms, and hiring decisions. The absence of multilateral AI standards means each institution independently decides whether humans are partners in decision-making or obstacles to speed.\n\nThe story also reveals institutional capture: even U.S. lawmakers acknowledge they lack the capacity to govern AI deployment velocity. If Congress cannot establish binding oversight of military AI within the U.S. system, there is no realistic path to international labor protections that would anchor human dignity in intrinsic worth rather than performance metrics. Workers globally will face a patchwork where some jurisdictions protect human decision-making authority as a right, and others treat it as a luxury the mission cannot afford.\n\n**This news ACCELERATES the shift away from intrinsic human worth.** The military case legitimizes the removal of humans from consequential decisions and establishes speed and efficiency\u2014not moral authority or human flourishing\u2014as the governing principle. Without immediate counterbalancing policy action (a binding U.S. executive order on military AI, or congressional legislation requiring human sign-off on lethal autonomous systems), this story will be cited as precedent for stripping human judgment from other high-stakes sectors.\n\n**Watch for:** Congressional testimony or legislative language in the coming weeks that either (1) mandates human decision-makers in military targeting (reversing the precedent), or (2) narrows oversight to \"efficiency safeguards\" without restoring human authority. The first signals resistance to performance-based displacement; the second confirms the logic of human obsolescence is now embedded in U.S. security doctrine."
 }
