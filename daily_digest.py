@@ -69,60 +69,71 @@ def fetch_top_story_per_topic() -> list:
     for topic in RAW_TOPICS:
         topic_name = get_topic_name(topic)
         keywords   = get_topic_keywords(topic)
-        query      = " OR ".join(f'"{kw}"' for kw in keywords[:3])
 
-        try:
-            response = requests.get(
-                "https://newsapi.org/v2/everything",
-                params={
-                    "q": query,
-                    "language": "en",
-                    "sortBy": "publishedAt",
-                    "pageSize": 5,
-                    "from": (datetime.now() - timedelta(hours=24)).strftime("%Y-%m-%dT%H:%M:%S"),
-                },
-                headers={"X-Api-Key": NEWS_API_KEY},
-                timeout=10,
-            )
-            data = response.json()
+        # Build simple query — first two words of each keyword, no quotes
+        simple_terms = []
+        for kw in keywords[:4]:
+            words = kw.strip().split()[:2]
+            simple_terms.append(" ".join(words))
+        query = " OR ".join(simple_terms)
 
-            if data.get("status") != "ok":
-                print(f"  ⚠️  NewsAPI error for '{topic_name}': {data.get('message')}")
-                continue
+        found = False
+        for hours_back in [24, 72]:
+            if found:
+                break
+            try:
+                response = requests.get(
+                    "https://newsapi.org/v2/everything",
+                    params={
+                        "q": query,
+                        "language": "en",
+                        "sortBy": "publishedAt",
+                        "pageSize": 5,
+                        "from": (datetime.now() - timedelta(hours=hours_back)).strftime("%Y-%m-%dT%H:%M:%S"),
+                    },
+                    headers={"X-Api-Key": NEWS_API_KEY},
+                    timeout=10,
+                )
+                data = response.json()
 
-            articles = [
-                a for a in data.get("articles", [])
-                if a.get("title") and a.get("title") != "[Removed]"
-                and a.get("description")
-            ]
+                if data.get("status") != "ok":
+                    print(f"  NewsAPI error for {topic_name}: {data.get('message')}")
+                    break
 
-            if articles:
-                best = articles[0]  # most recent
-                top_stories.append({
-                    "topic_name":        topic_name,
-                    "topic_description": get_topic_description(topic),
-                    "title":             best.get("title", ""),
-                    "description":       (best.get("description") or "")[:600],
-                    "content":           (best.get("content") or "")[:800],
-                    "source":            best.get("source", {}).get("name", "Unknown Source"),
-                    "author":            best.get("author", ""),
-                    "url":               best.get("url", ""),
-                    "published":         best.get("publishedAt", ""),
-                })
-                print(f"  ✅ [{topic_name}] → {best.get('title', '')[:60]}...")
-            else:
-                print(f"  ⚠️  No articles found for '{topic_name}' in past 24 hours")
+                articles = [
+                    a for a in data.get("articles", [])
+                    if a.get("title") and a.get("title") != "[Removed]"
+                    and a.get("description")
+                ]
 
-        except Exception as e:
-            print(f"  ⚠️  Failed to fetch '{topic_name}': {e}")
+                if articles:
+                    best = articles[0]
+                    top_stories.append({
+                        "topic_name":        topic_name,
+                        "topic_description": get_topic_description(topic),
+                        "title":             best.get("title", ""),
+                        "description":       (best.get("description") or "")[:600],
+                        "content":           (best.get("content") or "")[:800],
+                        "source":            best.get("source", {}).get("name", "Unknown Source"),
+                        "author":            best.get("author", ""),
+                        "url":               best.get("url", ""),
+                        "published":         best.get("publishedAt", ""),
+                    })
+                    label = "24h" if hours_back == 24 else "3d fallback"
+                    print(f"  OK [{topic_name}] ({label}) -> {best.get('title', '')[:55]}...")
+                    found = True
+                else:
+                    if hours_back == 24:
+                        print(f"  [{topic_name}] Nothing in 24h, trying 3 days...")
+                    else:
+                        print(f"  [{topic_name}] No articles found even in 3 days")
 
-    print(f"\n  📋 Total: {len(top_stories)} stories across {len(RAW_TOPICS)} topics")
+            except Exception as e:
+                print(f"  Failed to fetch {topic_name}: {e}")
+                break
+
+    print(f"\n  Total: {len(top_stories)} stories across {len(RAW_TOPICS)} topics")
     return top_stories
-
-
-# ─────────────────────────────────────────────
-# STEP 2: ANALYZE EACH STORY WITH CLAUDE
-# ─────────────────────────────────────────────
 
 def analyze_story(story: dict, client) -> dict:
     """Ask Claude to analyze a single story in the required structure."""
