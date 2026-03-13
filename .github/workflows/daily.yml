@@ -2,7 +2,7 @@ name: Daily News Digest
 
 on:
   schedule:
-    - cron: '0 12 * * *'   # 7:00 AM EST = 12:00 UTC (adjust for daylight saving: use '0 11 * * *' in summer)
+    - cron: '0 11 * * *'    # 7:00 AM EST = 12:00 UTC (adjust for daylight saving: use '0 11 * * *' in summer)
   workflow_dispatch:         # allows manual trigger from GitHub UI (great for testing!)
 
 jobs:
@@ -27,6 +27,7 @@ jobs:
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
         run: python daily_digest.py
 
       - name: Commit memory file

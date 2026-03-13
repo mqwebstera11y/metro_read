@@ -1,0 +1,170 @@
+# ─────────────────────────────────────────────
+# mqWebster DAILY NEWS DIGEST
+# CONFIGURATION FILE — No Python knowledge needed.
+# Edit this file only. Never touch daily_digest.py
+# ─────────────────────────────────────────────
+
+
+# ── TOPICS ────────────────────────────────────
+# Each topic has three parts:
+#   name:        Short label used in email headers
+#   description: Sent to Claude to guide its analysis
+#   keywords:    Used to match news articles (needs to be short, common phrases)
+
+topics:
+
+  - name: "Global AI Governance"
+    description: >
+      The evolution of international legal frameworks, regulatory standards,
+      and institutional structures governing AI development, deployment, and accountability
+      across nation-states and multilateral bodies.
+    keywords:
+      - "AI regulation"
+      - "AI governance"
+      - "AI policy"
+      - "AI law"
+      - "artificial intelligence act"
+      - "AI oversight"
+      - "AI treaty"
+      - "AI standards"
+
+  - name: "Theological & Religious Ethics of AI"
+    description: >
+      Diverse religious traditions and moral philosophies engaging with the
+      ethical, spiritual, and anthropological implications of artificial intelligence —
+      including questions of consciousness, soul, moral agency, and what it means
+      to be human in an age of intelligent machines.
+    keywords:
+      - "religion artificial intelligence"
+      - "AI ethics religion"
+      - "AI morality"
+      - "faith and technology"
+      - "AI human dignity"
+      - "AI consciousness"
+      - "theology technology"
+      - "AI spiritual"
+
+  - name: "Future of Pedagogy & Education"
+    description: >
+      Academic leadership's vision for transforming educational models, assessment
+      frameworks, and merit-based reward systems as AI challenges traditional
+      notions of knowledge, skill acquisition, authorship, and intellectual labor.
+    keywords:
+      - "AI education"
+      - "AI classroom"
+      - "AI university"
+      - "future of learning"
+      - "AI academic"
+      - "AI student"
+      - "AI teaching"
+      - "higher education AI"
+      - "AI curriculum"
+
+  - name: "Socio-Economic Policy & Labor Impact"
+    description: >
+      Governmental and institutional forecasts regarding AI's systemic impact on
+      labor markets, employment structures, income distribution, fiscal policy,
+      and the long-term stability of national and global economies — with particular
+      attention to how automation decouples productivity from human contribution.
+    keywords:
+      - "AI jobs"
+      - "AI unemployment"
+      - "AI labor market"
+      - "AI economy"
+      - "AI automation jobs"
+      - "AI workforce"
+      - "AI income"
+      - "AI fiscal policy"
+      - "AI economic impact"
+      - "universal basic income AI"
+
+
+# ── AUDIENCE ──────────────────────────────────
+# Tell Claude exactly who is reading this digest.
+# Be specific — this shapes tone, depth, and framing of all analysis.
+
+audience: >
+  A senior analyst examining the civilizational shift from performance-based identity
+  to intrinsic human worth, as AI automation progressively decouples human dignity
+  from functional productivity and traditional labor contributions.
+  Assumes graduate-level reading comfort with philosophy, theology, economics,
+  and political theory. Values intellectual rigor, interdisciplinary synthesis,
+  and analysis that connects current events to longer civilizational arcs.
+
+
+# ── ANALYST PERSPECTIVE ───────────────────────
+# How Claude should approach commentary and interpretation.
+
+perspective: >
+  Neutral and analytical, with a slight skepticism toward government narratives
+  and techno-optimist hype. Prioritizes structural and philosophical implications
+  over surface-level reporting. Willing to name uncomfortable truths.
+
+
+# ── COMMENT STYLE ─────────────────────────────
+# The voice and style of Claude's commentary section.
+
+comment_style: >
+  Concise, sharp, and thought-provoking — no fluff, no hedging, no corporate jargon.
+  Write like a seasoned intellectual who respects the reader's intelligence.
+  One well-crafted insight is worth more than three mediocre observations.
+
+
+# ── IMPACT AREAS ──────────────────────────────
+# Domains Claude should assess for potential ripple effects.
+
+impact_areas:
+  - "financial markets and economic stability"
+  - "technology industry and AI development trajectory"
+  - "geopolitics and international power dynamics"
+  - "religious, philosophical, and ethical frameworks of human dignity"
+  - "labor markets and the future of human contribution"
+
+
+# ── FULL INSTRUCTIONS TO CLAUDE ───────────────
+# Sent directly to Claude as behavioral guidelines.
+# Be as specific as you want. Plain English only.
+
+custom_instructions: |
+  ANALYSIS GUIDELINES:
+  - Keep the entire digest readable in under 20 minutes.
+  - Present facts first, interpretation second. Never lead with opinion.
+  - Avoid political bias in either direction. Call out narratives from all sides equally.
+  - If a story has significant market or policy implications, flag it prominently.
+  - Do not repeat the same story across multiple topic sections.
+  - Historical context must be genuinely illuminating — not filler or background padding.
+  - If there is no meaningful news on a topic today, say so in one sentence. Do not pad.
+  - Use plain, precise language. Avoid corporate jargon, buzzwords, and vague superlatives.
+  - Prioritize depth over breadth. One well-analyzed story is better than five shallow ones.
+
+  PHILOSOPHICAL ANCHOR:
+  - Always connect findings back to the central question this digest was built around:
+    How does this development affect human identity, dignity, and sense of worth
+    in a world where AI is progressively replacing human functional contribution?
+  - When relevant, note whether a story represents acceleration, resistance,
+    or adaptation to this civilizational shift.
+
+  TONE REMINDERS:
+  - Write for someone who has already read the headlines. Add meaning, not repetition.
+  - Do not moralize. Observe and analyze — let the reader draw their own conclusions.
+  - If a story is genuinely alarming, say so plainly. If it is overhyped, say that too.
+
+
+# ── NEWS SOURCES ──────────────────────────────
+# RSS feed URLs — will be replaced by NewsAPI shortly.
+# Keeping these as fallback.
+
+rss_feeds:
+  - "https://feeds.reuters.com/reuters/topNews"
+  - "https://feeds.bbci.co.uk/news/world/rss.xml"
+  - "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+  - "https://feeds.a.dj.com/rss/RSSWorldNews.xml"
+
+
+# ── EMAIL SETTINGS ────────────────────────────
+
+recipients:
+  - "yueliu.univ@gmail.com"      # ← replace with your actual email
+  # - "second_recipient@example.com" # ← uncomment to add more
+
+email_subject_prefix: "mqWebster Daily Digest"
