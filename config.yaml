@@ -5,6 +5,10 @@
 # ─────────────────────────────────────────────
 
 
+# ── HOW MANY STORIES PER TOPIC ─────────────────
+stories_per_topic: 5
+
+
 # ── TOPICS ────────────────────────────────────
 # Each topic has three parts:
 #   name:        Short label used in email headers
@@ -49,16 +53,17 @@ topics:
       Academic leadership's vision for transforming educational models, assessment
       frameworks, and merit-based reward systems as AI challenges traditional
       notions of knowledge, skill acquisition, authorship, and intellectual labor.
+      Focus on institutional policy, curriculum transformation, and scholarly
+      debate — not product launches or software tools.
     keywords:
-      - "AI education"
-      - "AI classroom"
-      - "AI university"
-      - "future of learning"
-      - "AI academic"
-      - "AI student"
-      - "AI teaching"
-      - "higher education AI"
-      - "AI curriculum"
+      - "AI education policy"
+      - "AI higher education"
+      - "AI university academic"
+      - "AI curriculum reform"
+      - "AI assessment education"
+      - "AI academic integrity"
+      - "AI teaching learning"
+      - "AI student authorship"
 
   - name: "Socio-Economic Policy & Labor Impact"
     description: >
@@ -66,17 +71,36 @@ topics:
       labor markets, employment structures, income distribution, fiscal policy,
       and the long-term stability of national and global economies — with particular
       attention to how automation decouples productivity from human contribution.
+      Focus on macro-level policy, institutional reports, and meaningful economic shifts —
+      not individual company layoffs or local workforce stories.
     keywords:
-      - "AI jobs"
-      - "AI unemployment"
-      - "AI labor market"
-      - "AI economy"
-      - "AI automation jobs"
-      - "AI workforce"
-      - "AI income"
+      - "AI labor market policy"
+      - "AI unemployment economic"
+      - "AI workforce displacement"
+      - "AI automation economy"
+      - "AI income inequality"
       - "AI fiscal policy"
       - "AI economic impact"
       - "universal basic income AI"
+      - "AI jobs future work"
+
+  - name: "Governments & AI Impact on Society"
+    description: >
+      How leading governments worldwide are shaping national strategy and public
+      discourse around AI's societal consequences — including civil rights protections,
+      public welfare policies, surveillance implications, and whether governments
+      acknowledge or suppress AI's transformative impact on their populations.
+      Prioritize stories from countries with the highest global influence
+      (e.g. US, China, EU nations, UK, India) ranked by scope of impact on citizens.
+    keywords:
+      - "government AI citizens"
+      - "national AI strategy society"
+      - "government AI social impact"
+      - "AI public welfare policy"
+      - "government AI people rights"
+      - "AI surveillance government"
+      - "AI social policy nation"
+      - "government AI workers population"
 
 
 # ── AUDIENCE ──────────────────────────────────
@@ -150,15 +174,41 @@ custom_instructions: |
   - If a story is genuinely alarming, say so plainly. If it is overhyped, say that too.
 
 
-# ── NEWS SOURCES ──────────────────────────────
-# RSS feed URLs — will be replaced by NewsAPI shortly.
-# Keeping these as fallback.
+# ── TRUSTED NEWS SOURCES ───────────────────────
+# Only articles from these domains will be considered.
+# Add or remove domains as needed — use domain names only (no https://).
 
-rss_feeds:
-  - "https://feeds.reuters.com/reuters/topNews"
-  - "https://feeds.bbci.co.uk/news/world/rss.xml"
-  - "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-  - "https://feeds.a.dj.com/rss/RSSWorldNews.xml"
+trusted_domains:
+  - "reuters.com"
+  - "nytimes.com"
+  - "wsj.com"
+  - "bbc.com"
+  - "bbc.co.uk"
+  - "theguardian.com"
+  - "ft.com"
+  - "apnews.com"
+  - "npr.org"
+  - "washingtonpost.com"
+  - "politico.com"
+  - "theatlantic.com"
+  - "axios.com"
+  - "bloomberg.com"
+  - "economist.com"
+  - "foreignaffairs.com"
+  - "foreignpolicy.com"
+  - "wired.com"
+  - "technologyreview.com"
+  - "arstechnica.com"
+  - "nature.com"
+  - "sciencemag.org"
+  - "brookings.edu"
+  - "pewresearch.org"
+  - "cfr.org"
+  - "time.com"
+  - "newsweek.com"
+  - "nbcnews.com"
+  - "cbsnews.com"
+  - "abcnews.go.com"
 
 
 # ── EMAIL SETTINGS ────────────────────────────
