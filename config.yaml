@@ -27,10 +27,10 @@ topics:
       - "AI governance"
       - "AI policy"
       - "AI law"
-      - "artificial intelligence act"
       - "AI oversight"
-      - "AI treaty"
+      - "AI rules"
       - "AI standards"
+      - "AI framework"
 
   - name: "Theological & Religious Ethics of AI"
     description: >
@@ -39,13 +39,13 @@ topics:
       including questions of consciousness, soul, moral agency, and what it means
       to be human in an age of intelligent machines.
     keywords:
-      - "religion artificial intelligence"
-      - "AI ethics religion"
+      - "AI religion"
+      - "AI faith"
+      - "AI ethics"
       - "AI morality"
-      - "faith and technology"
-      - "AI human dignity"
       - "AI consciousness"
-      - "theology technology"
+      - "AI humanity"
+      - "AI soul"
       - "AI spiritual"
 
   - name: "Future of Pedagogy & Education"
@@ -56,14 +56,14 @@ topics:
       Focus on institutional policy, curriculum transformation, and scholarly
       debate — not product launches or software tools.
     keywords:
-      - "AI education policy"
-      - "AI higher education"
-      - "AI university academic"
-      - "AI curriculum reform"
-      - "AI assessment education"
-      - "AI academic integrity"
-      - "AI teaching learning"
-      - "AI student authorship"
+      - "AI education"
+      - "AI school"
+      - "AI university"
+      - "AI learning"
+      - "AI students"
+      - "AI classroom"
+      - "AI teachers"
+      - "AI academic"
 
   - name: "Socio-Economic Policy & Labor Impact"
     description: >
@@ -74,33 +74,32 @@ topics:
       Focus on macro-level policy, institutional reports, and meaningful economic shifts —
       not individual company layoffs or local workforce stories.
     keywords:
-      - "AI labor market policy"
-      - "AI unemployment economic"
-      - "AI workforce displacement"
-      - "AI automation economy"
-      - "AI income inequality"
-      - "AI fiscal policy"
-      - "AI economic impact"
-      - "universal basic income AI"
-      - "AI jobs future work"
+      - "AI jobs"
+      - "AI workers"
+      - "AI economy"
+      - "AI labor"
+      - "AI wages"
+      - "AI automation"
+      - "AI workforce"
+      - "AI unemployment"
 
   - name: "Governments & AI Impact on Society"
     description: >
       How leading governments worldwide are shaping national strategy and public
       discourse around AI's societal consequences — including civil rights protections,
-      public welfare policies, surveillance implications, and whether governments
-      acknowledge or suppress AI's transformative impact on their populations.
+      public welfare policies, surveillance implications, military use, and whether
+      governments acknowledge or suppress AI's transformative impact on their populations.
       Prioritize stories from countries with the highest global influence
       (e.g. US, China, EU nations, UK, India) ranked by scope of impact on citizens.
     keywords:
-      - "government AI citizens"
-      - "national AI strategy society"
-      - "government AI social impact"
-      - "AI public welfare policy"
-      - "government AI people rights"
-      - "AI surveillance government"
-      - "AI social policy nation"
-      - "government AI workers population"
+      - "government AI"
+      - "AI military"
+      - "AI defense"
+      - "AI national security"
+      - "AI surveillance"
+      - "AI citizens"
+      - "AI public"
+      - "AI society"
 
 
 # ── AUDIENCE ──────────────────────────────────
@@ -180,35 +179,20 @@ custom_instructions: |
 
 trusted_domains:
   - "reuters.com"
-  - "nytimes.com"
-  - "wsj.com"
-  - "bbc.com"
-  - "bbc.co.uk"
-  - "theguardian.com"
-  - "ft.com"
   - "apnews.com"
-  - "npr.org"
+  - "bbc.com"
+  - "nytimes.com"
+  - "theguardian.com"
   - "washingtonpost.com"
   - "politico.com"
+  - "bloomberg.com"
+  - "ft.com"
+  - "wsj.com"
+  - "economist.com"
+  - "npr.org"
   - "theatlantic.com"
   - "axios.com"
-  - "bloomberg.com"
-  - "economist.com"
-  - "foreignaffairs.com"
-  - "foreignpolicy.com"
-  - "wired.com"
   - "technologyreview.com"
-  - "arstechnica.com"
-  - "nature.com"
-  - "sciencemag.org"
-  - "brookings.edu"
-  - "pewresearch.org"
-  - "cfr.org"
-  - "time.com"
-  - "newsweek.com"
-  - "nbcnews.com"
-  - "cbsnews.com"
-  - "abcnews.go.com"
 
 
 # ── EMAIL SETTINGS ────────────────────────────
