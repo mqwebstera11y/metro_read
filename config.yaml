@@ -1,0 +1,84 @@
+# ─────────────────────────────────────────────
+# DAILY NEWS DIGEST — YOUR CONFIGURATION FILE
+# Edit this file to customize everything.
+# No Python knowledge needed.
+# ─────────────────────────────────────────────
+
+
+# ── TOPICS ────────────────────────────────────
+# What subjects should the digest track?
+# Add or remove lines as needed.
+
+topics:
+  - "Global AI Governance: The evolution of international legal frameworks and regulatory standards governing AI development and application."
+  - "Theological Ethics of AI: Diverse religious perspectives and moral stances on the integration of artificial intelligence into human life."
+  - "The Future of Pedagogy: Academic leadership’s vision for evolving educational models and merit-based reward systems in an AI-saturated landscape."
+  - "Socio-Economic Policy Projections: Governmental forecasts regarding AI’s impact on labor markets, fiscal structures, and national economic stability."
+
+
+
+# ── WHO YOU ARE ───────────────────────────────
+# Tell Claude who is reading this digest.
+# This shapes the tone and depth of analysis.
+
+audience: "Analyst who analyzes the shift from performance-based identity to intrinsic worth as AI automation decouples human dignity from functional productivity and traditional labor contributions."
+
+
+# ── ANALYST PERSPECTIVE ───────────────────────
+# How should Claude approach the commentary?
+# Examples: "neutral", "skeptical",  "contrarian"
+
+perspective: "neutral and analytical, with a slight skepticism toward government narratives"
+
+
+# ── COMMENT STYLE ─────────────────────────────
+# How should the comments be written?
+
+comment_style: "concise, sharp, thought-provoking — no fluff"
+
+
+# ── IMPACT AREAS ──────────────────────────────
+# Which areas should Claude assess for potential impact?
+
+impact_areas:
+  - "financial markets"
+  - "technology industry"
+  - "geopolitics"
+  - "religious"
+
+
+# ── FULL INSTRUCTIONS TO CLAUDE ───────────────
+# This is sent directly to Claude as additional guidance.
+# Write in plain English. Be as specific as you want.
+# Examples: preferred length, what to avoid, special focus areas.
+
+custom_instructions: |
+  - Keep the entire digest readable in under 20 minutes.
+  - Avoid political bias. Present facts first, then interpretation.
+  - If a story has significant market implications, flag it prominently.
+  - Do not repeat the same story across multiple topics.
+  - Historical context should be genuinely useful, not just filler.
+  - If there is no meaningful news on a topic today, say so briefly rather than padding.
+  - Use plain, direct language. Avoid corporate jargon.
+
+
+# ── NEWS SOURCES ──────────────────────────────
+# RSS feed URLs to crawl. Add or remove as needed.
+# Tip: Search "[newspaper name] RSS feed" to find more.
+
+rss_feeds:
+  - "https://feeds.reuters.com/reuters/topNews"
+  - "https://feeds.bbci.co.uk/news/world/rss.xml"
+  - "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+  - "https://feeds.a.dj.com/rss/RSSWorldNews.xml"
+
+
+# ── EMAIL SETTINGS ────────────────────────────
+# Who receives the digest?
+# You can add multiple recipients.
+
+recipients:
+  - "you@gmail.com"
+  # - "colleague@company.com"   ← uncomment to add more
+
+email_subject_prefix: "mqWebster Daily Digest"
