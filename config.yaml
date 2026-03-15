@@ -19,18 +19,23 @@ topics:
 
   - name: "Global AI Governance"
     description: >
-      The evolution of international legal frameworks, regulatory standards,
-      and institutional structures governing AI development, deployment, and accountability
-      across nation-states and multilateral bodies.
+      The evolution of legal frameworks, regulatory standards, and institutional structures
+      governing AI development, deployment, and accountability — from national legislation
+      and sector-specific policies to international treaties and multilateral standards bodies.
+      Includes government agencies, parliamentary debates, regulatory rulings, and institutional
+      voices (unions, professional bodies, civil society) responding to AI governance gaps.
+      National-level policy stories are in scope, not just multilateral agreements.
     keywords:
       - "AI regulation"
       - "AI governance"
       - "AI policy"
       - "AI law"
       - "AI oversight"
+      - "AI legislation"
       - "AI rules"
       - "AI standards"
       - "AI framework"
+      - "AI compliance"
 
   - name: "Religion & Belief in the Age of AI"
     description: >
@@ -42,69 +47,59 @@ topics:
       Prioritize concrete institutional positions and community responses over abstract
       academic ethics papers.
     keywords:
-      - "religion AI"
-      - "church AI"
-      - "faith AI"
-      - "AI God"
-      - "AI Pope"
-      - "AI Islam"
-      - "AI Bible"
+      - '"artificial intelligence" religion'
+      - '"artificial intelligence" faith'
+      - '"artificial intelligence" church'
+      - '"artificial intelligence" Vatican'
+      - '"artificial intelligence" religious'
+      - '"artificial intelligence" spiritual'
+      - '"artificial intelligence" theology'
       - "AI spirituality"
+      - "AI religion"
 
   - name: "Future of Pedagogy & Education"
     description: >
-      How AI is breaking the link between effort and credentials — students using AI to
-      complete assignments and pass exams, raising the question of whether degrees and
-      test scores still signal real knowledge. Focus on: academic integrity crises,
-      how schools and exam boards are responding, whether traditional qualifications
-      still mean anything when AI can do the work, and what "learning" even means
-      when the output is indistinguishable from human effort.
-      Reject software product launches and generic EdTech stories.
+      How AI is transforming education — both as a disruptive force breaking the link
+      between effort and credentials (students using AI for assignments, academic integrity
+      crises, degree value erosion) and as a systemic shift in how knowledge is taught,
+      assessed, and certified. Focus on: schools and universities responding to AI,
+      whether traditional qualifications still signal real knowledge, what "learning" means
+      when AI can produce indistinguishable output, and AI's structural impact on pedagogy.
+      Reject software product launches and generic EdTech marketing stories.
     keywords:
+      - "AI education"
+      - "AI students"
+      - "AI school"
+      - "AI university"
+      - "AI classroom"
+      - "AI teacher"
+      - "AI learning"
       - "AI cheating"
-      - "AI exam"
-      - "AI plagiarism"
       - "AI academic integrity"
-      - "AI students homework"
-      - "AI college admissions"
-      - "AI credentials"
       - "AI degree"
 
   - name: "AI & the Job Market"
     description: >
-      Measurable changes in the labor market driven by AI — job openings data,
-      unemployment rates, hiring freezes, role eliminations, and sector-level
-      employment shifts. Focus on numbers and trends: which industries are shedding
-      jobs, which roles are disappearing, what the latest employment reports say
-      about AI-driven displacement. Prefer stories with concrete data over opinion
-      pieces. Include central bank, BLS, IMF, or OECD reports when available.
+      Measurable and structural changes in the labor market driven by AI — job openings
+      data, hiring freezes, role eliminations, sector-level displacement, and shifts in
+      which skills employers value. Includes both hard data (BLS, IMF, OECD reports,
+      company layoff announcements) and emerging patterns (AI locking people out of
+      application processes, AI changing demand for humanities/creative skills, "invisible
+      layoffs" where positions simply aren't refilled). Covers the full spectrum: which
+      jobs are disappearing, which are being transformed, and what workers are doing in
+      response.
     keywords:
-      - "AI job losses"
-      - "AI hiring"
-      - "AI unemployment"
-      - "AI job market"
+      - "AI jobs"
+      - "AI workers"
+      - "AI workforce"
       - "AI layoffs"
-      - "AI employment"
-      - "AI job openings"
-      - "AI replaced workers"
-
-  - name: "Governments & AI Impact on Society"
-    description: >
-      How leading governments worldwide are shaping national strategy and public
-      discourse around AI's societal consequences — including civil rights protections,
-      public welfare policies, surveillance implications, military use, and whether
-      governments acknowledge or suppress AI's transformative impact on their populations.
-      Prioritize stories from countries with the highest global influence
-      (e.g. US, China, EU nations, UK, India) ranked by scope of impact on citizens.
-    keywords:
-      - "government AI"
-      - "AI military"
-      - "AI defense"
-      - "AI national security"
-      - "AI surveillance"
-      - "AI citizens"
-      - "AI public"
-      - "AI society"
+      - "AI hiring"
+      - "AI job market"
+      - "AI unemployment"
+      - "AI automation workers"
+      - "AI skills demand"
+      - "invisible layoff"
+      - "AI replaced"
 
 
 # ── AUDIENCE ──────────────────────────────────
@@ -179,8 +174,9 @@ custom_instructions: |
 
 
 # ── TRUSTED NEWS SOURCES ───────────────────────
-# Only articles from these domains will be considered.
-# Add or remove domains as needed — use domain names only (no https://).
+# Articles from these sources are pre-approved for selection.
+# Sources not on this list may still be accepted if credible for the specific topic
+# (e.g. Vatican News for religion, education journals for pedagogy).
 
 trusted_domains:
   - "reuters.com"
@@ -198,6 +194,8 @@ trusted_domains:
   - "theatlantic.com"
   - "axios.com"
   - "technologyreview.com"
+  - "businessinsider.com"
+  - "foxbusiness.com"
 
 
 # ── EMAIL SETTINGS ────────────────────────────

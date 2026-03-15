@@ -134,29 +134,32 @@ def select_top_stories(topic, articles: list, client) -> list:
         for i, a in enumerate(articles)
     )
 
+    trusted_list = ", ".join(CONFIG.get("trusted_domains", []))
+
     prompt = f"""You are a news curator. Select up to {STORIES_PER_TOPIC} articles that DIRECTLY address this topic.
 
 TOPIC: {topic_name}
 DESCRIPTION: {topic_desc}
 
-SELECTION RULES — every article must clear ALL of these:
-1. STRICT RELEVANCE: The article must be substantively about {topic_name} — not just an AI article
-   that tangentially touches the theme. If the topic is religion and AI, the article must be
-   about religion, faith communities, or belief systems engaging with AI — not generic AI news.
-2. Has policy depth, expert analysis, institutional significance, or concrete data.
-3. Not a product launch, software release, personal blog, or purely local story.
-4. SOURCE QUALITY: Prefer Reuters, AP, BBC, NYT, Guardian, Washington Post, Bloomberg, FT,
-   WSJ, Economist, NPR, Atlantic, Axios, Politico, MIT Technology Review. Reject clickbait,
-   sponsored content, and low-credibility outlets.
-
-ZERO TOLERANCE: Any article that does not directly address {topic_name} must be excluded,
-even if it mentions AI. It is better to return [] than to include off-topic articles.
+SELECTION RULES:
+1. RELEVANCE: The article must be substantively about {topic_name} — not a generic AI article
+   that only tangentially touches the theme. Judge by whether the topic's core concern is the
+   actual subject of the article, not just a passing mention.
+2. SUBSTANCE: Has policy depth, expert analysis, institutional significance, or concrete data.
+   Not a product launch, software release, or pure opinion piece without factual grounding.
+3. SOURCE QUALITY: Pre-approved outlets: {trusted_list}.
+   For specialized topics, credible niche publications are also acceptable — e.g., Vatican News
+   or religious press for Religion; education journals for Pedagogy; think tanks, research
+   institutes, and business outlets for Labor/Job Market. Accept any outlet with genuine
+   editorial standards. Reject only tabloids, clickbait, sponsored content, and sites with
+   no journalistic accountability. Do NOT reject an article solely because the outlet is
+   smaller or niche — relevance and credibility for the specific topic matter more than brand.
 
 ARTICLES:
 {articles_text}
 
 Reply ONLY with a JSON array of indices for qualifying articles, best-first. Example: [3, 0, 2]
-If fewer qualify, return only those. If none qualify, return [].
+If fewer qualify, return only those indices. If none qualify, return [].
 JSON array ONLY — no explanation."""
 
     try:
