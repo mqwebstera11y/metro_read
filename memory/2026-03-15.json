@@ -5,19 +5,19 @@
       "topic": "Global AI Governance",
       "stories": [
         {
-          "title": "US gov't revokes controversial AI hardware export rule that would mandate investments from foreign companies \u2014 new export rules are still in the works, though",
+          "title": "China bans OpenClaw from government computers and issues security guidelines amid adoption frenzy \u2014 nation scrambles to rein in popular AI agent",
           "source": "Tom's Hardware UK",
-          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/us-govt-revokes-controversial-ai-hardware-export-rule-that-would-mandate-investments-from-foreign-companies-new-export-rules-are-still-in-the-works-though"
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/china-bans-openclaw-from-government-computers-and-issues-security-guidelines-amid-adoption-frenzy"
         },
         {
-          "title": "The 2026 farm bill quietly hands big tech control over American farmland. Here\u2019s the fine print",
-          "source": "Fortune",
-          "url": "https://fortune.com/2026/03/14/farm-bill-2026-big-tech-ai-precision-agriculture-eqip-subsidy/"
+          "title": "AI cannot replace trained mind of lawyer, ethical responsibility of judge: Justice Vikram Nath",
+          "source": "The Times of India",
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/ai-cannot-replace-trained-mind-of-lawyer-ethical-responsibility-of-judge-justice-vikram-nath/articleshow/129571456.cms"
         },
         {
-          "title": "Tech bills of the week: Improved biological data for research; Section 702 reform; and more",
-          "source": "Nextgov",
-          "url": "https://www.nextgov.com/policy/2026/03/tech-bills-week-improved-biological-data-research-section-702-reform-and-more/412121/"
+          "title": "20VC x SaaStr This Week: Anthropic Sues the Government, The Death of the Junior, and Why \u201cGentle Deceleration\u201d is Over",
+          "source": "Saastr.com",
+          "url": "https://www.saastr.com/20vc-x-saastr-this-week-anthropic-sues-the-government-the-death-of-the-junior-and-why-gentle-deceleration-is-over/"
         }
       ]
     },
@@ -25,9 +25,9 @@
       "topic": "Future of Pedagogy & Education",
       "stories": [
         {
-          "title": "Professors Say AI Is Destroying Their Students\u2019 Ability to Think",
-          "source": "Futurism",
-          "url": "http://futurism.com/artificial-intelligence/professors-ai-destroying-students-thinking"
+          "title": "\u2018Einstein\u2018 bot sharpens debate over AI in the classroom",
+          "source": "Nature.com",
+          "url": "https://www.nature.com/articles/d41586-026-00764-w"
         }
       ]
     },
@@ -35,22 +35,22 @@
       "topic": "AI & the Job Market",
       "stories": [
         {
-          "title": "I spent 17 hours at a legal conference. These were the two questions haunting lawyers about AI.",
-          "source": "Business Insider",
-          "url": "https://www.businessinsider.com/inside-legalweek-2026-ai-adoption-lawyers-law-firms-2026-3"
+          "title": "Hometown Workforce Introduces an AI Startup that Creates Jobs and Businesses Instead of Replacing Them",
+          "source": "Associated Press",
+          "url": "https://apnews.com/press-release/getnews/hometown-workforce-introduces-an-ai-startup-that-creates-jobs-and-businesses-instead-of-replacing-them-ad661e75af2e89f164a027d71b376538"
         },
         {
-          "title": "Andrew Yang says we should stop taxing workers \u2014 and start taxing AI",
-          "source": "Business Insider",
-          "url": "https://www.businessinsider.com/andrew-yang-says-stop-taxing-workers-start-taxing-ai-2026-3"
+          "title": "AI isn\u2019t replacing workers \u2013 it\u2019s making them compete",
+          "source": "Dazed",
+          "url": "https://www.dazeddigital.com/life-culture/article/69863/1/ai-pressure-to-become-an-irreplaceable-worker-myth-chatgpt-claude?utm_source=Link&utm_medium=Link&utm_campaign=RSSFeed&utm_term=ai-isn-t-replacing-workers-it-s-making-them-compete"
         },
         {
-          "title": "Young people find digital marketing \"meh\" - and that's the industry's real problem",
-          "source": "Ppc.land",
-          "url": "https://ppc.land/young-people-find-digital-marketing-meh-and-thats-the-industrys-real-problem/"
+          "title": "Firms Predict An AI Productivity Boom Is Coming",
+          "source": "Cepr.org",
+          "url": "https://cepr.org/voxeu/columns/firms-predict-ai-productivity-boom-coming"
         }
       ]
     }
   ],
-  "synthesis": "# What This Means for Human Dignity & Labor\n\nThe U.S. government and private sector are simultaneously abandoning the infrastructure that historically linked human effort to economic value and social protection. The U.S. revoked explicit hardware export controls while the 2026 farm bill delegates AI governance to private vendors rather than public agencies\u2014both moves that dissolve the state's capacity to mediate automation's distributional impacts. Meanwhile, professors report that AI is decoupling demonstrated intellectual competence from credential attainment within the learning process itself, collapsing the confidence that effort-based mastery produces verifiable knowledge.\n\nToday's news **accelerates** the shift away from performance-based identity toward a world where work and credentials no longer reliably generate dignity or social membership. Watch the 2026 farm bill's implementation in agricultural labor markets: if AI deployment proceeds without public oversight mechanisms, and rural workers experience displacement without corresponding retraining or income protection, the political coalition required to fund alternative social contracts through AI taxation (Yang's proposal) will have already fractured along geographic and sectoral lines."
+  "synthesis": "# What This Means for Human Dignity & Labor\n\nThe governing institutions tasked with protecting human agency\u2014courts, governments, corporations\u2014are abandoning negotiated frameworks for unilateral control, leaving workers and citizens without anchors as AI capability expands faster than accountability mechanisms can follow. China's ban on OpenClaw from government systems reveals that centralized security apparatus cannot keep pace with decentralized AI adoption even within state apparatus; simultaneously, Anthropic's lawsuit against the government signals that AI firms now treat regulatory authority as litigation targets rather than negotiating partners, fracturing any emerging consensus on where human judgment must remain non-delegable. Justice Vikram Nath's articulation that ethical accountability cannot be delegated to machines establishes a principle\u2014but only in doctrine, not enforcement, as universities lack coherent theories for certifying competence (the Einstein bot case) and firms already plan workforce reductions before publishing productivity studies.\n\nThis **accelerates** the shift from performance-based identity toward a world where intrinsic human worth becomes irrelevant because labor market value collapses for the non-scarce majority. Watch whether Anthropic's litigation succeeds in narrowing regulatory scope by Q2 2025\u2014if firms win the right to define their own compliance boundaries while simultaneously executing planned job eliminations, the last institutional constraint on displacement will have dissolved, leaving only market scarcity to determine whose labor retains dignity."
 }
