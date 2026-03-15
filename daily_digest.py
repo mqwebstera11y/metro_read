@@ -240,10 +240,10 @@ Content excerpt: {story['content']}
 
 Respond ONLY with valid JSON, no markdown, no extra text:
 {{
-  "who_did_what": "2-3 plain sentences. State clearly: who are the key actors, what did they do or say, when and where. No interpretation yet.",
-  "source_comments": "2-3 sentences on how {story['source']} framed this story. What angle did they take? What did they emphasize or downplay?",
-  "ai_interpretation": "2-3 sentences. What does this actually mean? Cut through the noise. What is the real significance for the topic: {story['topic_name']}?",
-  "plain_explanation": "2-3 sentences. Explain this to a smart person who knows nothing about this topic. What is the bigger picture and why does it matter?"
+  "who_did_what": "1-2 sentences. Who, what, when, where — facts only.",
+  "source_comments": "1 sentence. What angle did {story['source']} take — what did they emphasize or downplay?",
+  "ai_interpretation": "1 sharp sentence. What does this actually mean for {story['topic_name']}? No hedging.",
+  "plain_explanation": "1-2 sentences. The bigger picture for someone unfamiliar with the topic."
 }}"""
 
     message = client.messages.create(
@@ -285,31 +285,24 @@ def generate_synthesis(topics_data: list, client) -> str:
 
     all_content = "\n\n".join(sections)
 
-    prompt = f"""You are a senior policy analyst. Below are today's top stories across five AI-related topics,
-with their key significance already extracted.
+    prompt = f"""You are a senior policy analyst. Today's top AI stories:
 
 {all_content}
 
-Write a synthesis section titled "What This Means for Human Dignity & Labor".
+Write a tight synthesis: "What This Means for Human Dignity & Labor"
 
-REQUIREMENTS:
-- Directly cite specific stories by referencing the actor, institution, or country by name
-  (e.g., "The EU's new framework reported by Reuters...", "As the NYT noted regarding X's decision...")
-- Draw concrete connections ACROSS topics — show how governance, religion, education, labor, and government
-  policy developments interact or reinforce each other today
-- Address the central question directly and specifically:
-  What do TODAY's stories collectively tell us about the shift from performance-based identity
-  toward intrinsic human worth as AI displaces human contribution?
-- State clearly whether today's news ACCELERATES, RESISTS, or COMPLICATES this shift — with evidence
-- End with ONE concrete, actionable observation the reader can act on or watch for
-- Plain English, short sentences, 4–5 paragraphs maximum
-- Every claim must connect to a specific story above — no generic statements
-
-Do NOT write vague generalities like "AI is changing society." Be specific. Quote actors and findings."""
+RULES:
+- 3 paragraphs maximum. Short sentences. No filler.
+- Name specific actors and stories — no generic "AI is changing society" statements.
+- Paragraph 1: The sharpest cross-topic pattern you see today.
+- Paragraph 2: Does today's news ACCELERATE, RESIST, or COMPLICATE the shift from
+  performance-based identity to intrinsic human worth? Give one concrete reason.
+- Paragraph 3: One thing to watch next. Make it specific and actionable.
+- Every sentence must earn its place. Cut anything vague."""
 
     message = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=1200,
+        max_tokens=600,
         messages=[{"role": "user", "content": prompt}]
     )
 

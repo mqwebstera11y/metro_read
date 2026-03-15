@@ -32,56 +32,61 @@ topics:
       - "AI standards"
       - "AI framework"
 
-  - name: "Theological & Religious Ethics of AI"
+  - name: "Religion & Belief in the Age of AI"
     description: >
-      Diverse religious traditions and moral philosophies engaging with the
-      ethical, spiritual, and anthropological implications of artificial intelligence —
-      including questions of consciousness, soul, moral agency, and what it means
-      to be human in an age of intelligent machines.
+      How religious institutions, faith communities, and belief systems are responding
+      to the rise of AI — from official positions by the Vatican, Islamic scholars,
+      Buddhist leaders, and Protestant denominations, to grassroots believers grappling
+      with AI replacing prayer, pastoral care, or moral guidance. Also covers secular
+      philosophical and humanist voices on whether AI challenges what makes us human.
+      Prioritize concrete institutional positions and community responses over abstract
+      academic ethics papers.
     keywords:
-      - "AI religion"
-      - "AI faith"
-      - "AI ethics"
-      - "AI morality"
-      - "AI consciousness"
-      - "AI humanity"
-      - "AI soul"
-      - "AI spiritual"
+      - "religion AI"
+      - "church AI"
+      - "faith AI"
+      - "AI God"
+      - "AI Pope"
+      - "AI Islam"
+      - "AI Bible"
+      - "AI spirituality"
 
   - name: "Future of Pedagogy & Education"
     description: >
-      Academic leadership's vision for transforming educational models, assessment
-      frameworks, and merit-based reward systems as AI challenges traditional
-      notions of knowledge, skill acquisition, authorship, and intellectual labor.
-      Focus on institutional policy, curriculum transformation, and scholarly
-      debate — not product launches or software tools.
+      How AI is breaking the link between effort and credentials — students using AI to
+      complete assignments and pass exams, raising the question of whether degrees and
+      test scores still signal real knowledge. Focus on: academic integrity crises,
+      how schools and exam boards are responding, whether traditional qualifications
+      still mean anything when AI can do the work, and what "learning" even means
+      when the output is indistinguishable from human effort.
+      Reject software product launches and generic EdTech stories.
     keywords:
-      - "AI education"
-      - "AI school"
-      - "AI university"
-      - "AI learning"
-      - "AI students"
-      - "AI classroom"
-      - "AI teachers"
-      - "AI academic"
+      - "AI cheating"
+      - "AI exam"
+      - "AI plagiarism"
+      - "AI academic integrity"
+      - "AI students homework"
+      - "AI college admissions"
+      - "AI credentials"
+      - "AI degree"
 
-  - name: "Socio-Economic Policy & Labor Impact"
+  - name: "AI & the Job Market"
     description: >
-      Governmental and institutional forecasts regarding AI's systemic impact on
-      labor markets, employment structures, income distribution, fiscal policy,
-      and the long-term stability of national and global economies — with particular
-      attention to how automation decouples productivity from human contribution.
-      Focus on macro-level policy, institutional reports, and meaningful economic shifts —
-      not individual company layoffs or local workforce stories.
+      Measurable changes in the labor market driven by AI — job openings data,
+      unemployment rates, hiring freezes, role eliminations, and sector-level
+      employment shifts. Focus on numbers and trends: which industries are shedding
+      jobs, which roles are disappearing, what the latest employment reports say
+      about AI-driven displacement. Prefer stories with concrete data over opinion
+      pieces. Include central bank, BLS, IMF, or OECD reports when available.
     keywords:
-      - "AI jobs"
-      - "AI workers"
-      - "AI economy"
-      - "AI labor"
-      - "AI wages"
-      - "AI automation"
-      - "AI workforce"
+      - "AI job losses"
+      - "AI hiring"
       - "AI unemployment"
+      - "AI job market"
+      - "AI layoffs"
+      - "AI employment"
+      - "AI job openings"
+      - "AI replaced workers"
 
   - name: "Governments & AI Impact on Society"
     description: >
