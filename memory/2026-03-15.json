@@ -5,19 +5,29 @@
       "topic": "Global AI Governance",
       "stories": [
         {
-          "title": "China bans OpenClaw from government computers and issues security guidelines amid adoption frenzy \u2014 nation scrambles to rein in popular AI agent",
+          "title": "US gov't revokes controversial AI hardware export rule that would mandate investments from foreign companies \u2014 new export rules are still in the works, though",
           "source": "Tom's Hardware UK",
-          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/china-bans-openclaw-from-government-computers-and-issues-security-guidelines-amid-adoption-frenzy"
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/us-govt-revokes-controversial-ai-hardware-export-rule-that-would-mandate-investments-from-foreign-companies-new-export-rules-are-still-in-the-works-though"
         },
         {
-          "title": "AI cannot replace trained mind of lawyer, ethical responsibility of judge: Justice Vikram Nath",
-          "source": "The Times of India",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/ai-cannot-replace-trained-mind-of-lawyer-ethical-responsibility-of-judge-justice-vikram-nath/articleshow/129571456.cms"
+          "title": "The 2026 farm bill quietly hands big tech control over American farmland. Here\u2019s the fine print",
+          "source": "Fortune",
+          "url": "https://fortune.com/2026/03/14/farm-bill-2026-big-tech-ai-precision-agriculture-eqip-subsidy/"
         },
         {
-          "title": "20VC x SaaStr This Week: Anthropic Sues the Government, The Death of the Junior, and Why \u201cGentle Deceleration\u201d is Over",
-          "source": "Saastr.com",
-          "url": "https://www.saastr.com/20vc-x-saastr-this-week-anthropic-sues-the-government-the-death-of-the-junior-and-why-gentle-deceleration-is-over/"
+          "title": "Show HN: Open-Source EU AI Act Compliance Scanning for CI/CD",
+          "source": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47376869"
+        }
+      ]
+    },
+    {
+      "topic": "Religion & Belief in the Age of AI",
+      "stories": [
+        {
+          "title": "AI Watch, Pt. 1",
+          "source": "Patheos",
+          "url": "https://www.patheos.com/blogs/geneveith/2026/03/ai-watch-pt-1/"
         }
       ]
     },
@@ -25,9 +35,19 @@
       "topic": "Future of Pedagogy & Education",
       "stories": [
         {
-          "title": "\u2018Einstein\u2018 bot sharpens debate over AI in the classroom",
-          "source": "Nature.com",
-          "url": "https://www.nature.com/articles/d41586-026-00764-w"
+          "title": "Nanyang Business School retools its degree for the AI age",
+          "source": "CNA",
+          "url": "https://www.channelnewsasia.com/brand-studio/nanyang-business-school-retools-its-degree-ai-age-5988056"
+        },
+        {
+          "title": "A PhD is an apprenticeship in research \u2013 we can\u2019t let AI take that away",
+          "source": "The Conversation Africa",
+          "url": "https://theconversation.com/a-phd-is-an-apprenticeship-in-research-we-cant-let-ai-take-that-away-277486"
+        },
+        {
+          "title": "Professors Say AI Is Destroying Their Students\u2019 Ability to Think",
+          "source": "Futurism",
+          "url": "http://futurism.com/artificial-intelligence/professors-ai-destroying-students-thinking"
         }
       ]
     },
@@ -35,22 +55,22 @@
       "topic": "AI & the Job Market",
       "stories": [
         {
-          "title": "Hometown Workforce Introduces an AI Startup that Creates Jobs and Businesses Instead of Replacing Them",
-          "source": "Associated Press",
-          "url": "https://apnews.com/press-release/getnews/hometown-workforce-introduces-an-ai-startup-that-creates-jobs-and-businesses-instead-of-replacing-them-ad661e75af2e89f164a027d71b376538"
+          "title": "Andrew Yang says we should stop taxing workers \u2014 and start taxing AI",
+          "source": "Business Insider",
+          "url": "https://www.businessinsider.com/andrew-yang-says-stop-taxing-workers-start-taxing-ai-2026-3"
         },
         {
-          "title": "AI isn\u2019t replacing workers \u2013 it\u2019s making them compete",
-          "source": "Dazed",
-          "url": "https://www.dazeddigital.com/life-culture/article/69863/1/ai-pressure-to-become-an-irreplaceable-worker-myth-chatgpt-claude?utm_source=Link&utm_medium=Link&utm_campaign=RSSFeed&utm_term=ai-isn-t-replacing-workers-it-s-making-them-compete"
+          "title": "I spent 17 hours at a legal conference. These were the two questions haunting lawyers about AI.",
+          "source": "Business Insider",
+          "url": "https://www.businessinsider.com/inside-legalweek-2026-ai-adoption-lawyers-law-firms-2026-3"
         },
         {
-          "title": "Firms Predict An AI Productivity Boom Is Coming",
-          "source": "Cepr.org",
-          "url": "https://cepr.org/voxeu/columns/firms-predict-ai-productivity-boom-coming"
+          "title": "Young people find digital marketing \"meh\" - and that's the industry's real problem",
+          "source": "Ppc.land",
+          "url": "https://ppc.land/young-people-find-digital-marketing-meh-and-thats-the-industrys-real-problem/"
         }
       ]
     }
   ],
-  "synthesis": "# What This Means for Human Dignity & Labor\n\nThe governing institutions tasked with protecting human agency\u2014courts, governments, corporations\u2014are abandoning negotiated frameworks for unilateral control, leaving workers and citizens without anchors as AI capability expands faster than accountability mechanisms can follow. China's ban on OpenClaw from government systems reveals that centralized security apparatus cannot keep pace with decentralized AI adoption even within state apparatus; simultaneously, Anthropic's lawsuit against the government signals that AI firms now treat regulatory authority as litigation targets rather than negotiating partners, fracturing any emerging consensus on where human judgment must remain non-delegable. Justice Vikram Nath's articulation that ethical accountability cannot be delegated to machines establishes a principle\u2014but only in doctrine, not enforcement, as universities lack coherent theories for certifying competence (the Einstein bot case) and firms already plan workforce reductions before publishing productivity studies.\n\nThis **accelerates** the shift from performance-based identity toward a world where intrinsic human worth becomes irrelevant because labor market value collapses for the non-scarce majority. Watch whether Anthropic's litigation succeeds in narrowing regulatory scope by Q2 2025\u2014if firms win the right to define their own compliance boundaries while simultaneously executing planned job eliminations, the last institutional constraint on displacement will have dissolved, leaving only market scarcity to determine whose labor retains dignity."
+  "synthesis": "# What This Means for Human Dignity & Labor\n\nAcross governance, education, and labor markets, institutions are systematically abandoning the fiction that human value derives from measurable economic output. The U.S. Department of Commerce retreated from using AI hardware export controls as coercive leverage\u2014replacing unilateral productivity maximization with negotiation\u2014while simultaneously, universities like Nanyang Business School are restructuring degrees away from \"demonstrable technical mastery\" toward unmeasurable soft competencies like \"global perspective,\" signaling that institutions no longer believe they can compete on productivity grounds. Andrew Yang's proposal to tax AI rather than workers names the core admission: the fiscal architecture treating labor as the primary value generator has become incoherent, forcing a choice between redesigning taxation around non-work citizenship or watching the social contract collapse.\n\nToday's news COMPLICATES rather than cleanly advances dignity-based frameworks, because the pressure is creating a two-tier system where the well-resourced escape displacement through upskilling while the vulnerable are abandoned to opaque algorithmic infrastructure. Watch the 2026 farm bill's implementation: if Big Tech vendors establish unaccountable standard-setting authority over agricultural governance without public auditing capacity, it will demonstrate whether the fragmentation of regulatory authority can be arrested before human labor becomes categorically unmoored from both economic necessity and social legitimacy."
 }
