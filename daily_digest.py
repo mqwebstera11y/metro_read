@@ -58,6 +58,30 @@ def get_topic_keywords(topic) -> list:
 def get_topic_description(topic) -> str:
     return topic if isinstance(topic, str) else topic.get("description", topic.get("name", ""))
 
+def get_topic_content_priority(topic) -> bool:
+    """If True, content match outweighs source prestige (used for niche topics like Religion)."""
+    return False if isinstance(topic, str) else topic.get("content_match_priority", False)
+
+
+def load_seen_urls(days: int = 10) -> set:
+    """Return URLs already published in recent memory files to prevent repeat stories."""
+    seen = set()
+    for i in range(days):
+        date = (datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d")
+        filepath = MEMORY_DIR / f"{date}.json"
+        if filepath.exists():
+            try:
+                with open(filepath) as f:
+                    data = json.load(f)
+                for entry in data.get("topics", []):
+                    if isinstance(entry, dict):
+                        for story in entry.get("stories", []):
+                            if isinstance(story, dict) and story.get("url"):
+                                seen.add(story["url"])
+            except Exception:
+                pass
+    return seen
+
 
 # ─────────────────────────────────────────────
 # STEP 1: FETCH ARTICLES FROM TRUSTED SOURCES
@@ -73,7 +97,7 @@ def fetch_articles_for_topic(topic) -> list:
     query = " OR ".join(terms)
     print(f"    Query: {query}")
 
-    for hours_back in [24, 72]:
+    for hours_back in [24, 96]:
         try:
             params = {
                 "q":        query,
@@ -108,7 +132,7 @@ def fetch_articles_for_topic(topic) -> list:
                 print(f"  [{topic_name}] {len(articles)} candidates ({label})")
                 return articles
             elif hours_back == 24:
-                print(f"  [{topic_name}] Nothing in 24h, trying 72h...")
+                print(f"  [{topic_name}] Nothing in 24h, trying 96h...")
 
         except Exception as e:
             print(f"  Failed to fetch [{topic_name}]: {e}")
@@ -134,7 +158,21 @@ def select_top_stories(topic, articles: list, client) -> list:
         for i, a in enumerate(articles)
     )
 
-    trusted_list = ", ".join(CONFIG.get("trusted_domains", []))
+    trusted_list       = ", ".join(CONFIG.get("trusted_domains", []))
+    content_priority   = get_topic_content_priority(topic)
+
+    if content_priority:
+        source_rule = """3. SOURCE QUALITY: Content match is the ONLY criterion that matters for source acceptance.
+   Accept any outlet — local TV, religious press, community news, niche sites — as long as
+   the article is directly on topic. Reject only obvious spam, AI-generated content farms,
+   or pages with no actual article text."""
+    else:
+        source_rule = f"""3. SOURCE QUALITY: Pre-approved outlets: {trusted_list}.
+   For specialized topics, credible niche publications are also acceptable — e.g., education
+   journals for Pedagogy; think tanks, research institutes, and business outlets for Labor.
+   Accept any outlet with genuine editorial standards. Reject only tabloids, clickbait,
+   sponsored content, and sites with no journalistic accountability. Do NOT reject an article
+   solely because the outlet is smaller or niche — relevance matters more than brand."""
 
     prompt = f"""You are a news curator. Select up to {STORIES_PER_TOPIC} articles that DIRECTLY address this topic.
 
@@ -147,13 +185,7 @@ SELECTION RULES:
    actual subject of the article, not just a passing mention.
 2. SUBSTANCE: Has policy depth, expert analysis, institutional significance, or concrete data.
    Not a product launch, software release, or pure opinion piece without factual grounding.
-3. SOURCE QUALITY: Pre-approved outlets: {trusted_list}.
-   For specialized topics, credible niche publications are also acceptable — e.g., Vatican News
-   or religious press for Religion; education journals for Pedagogy; think tanks, research
-   institutes, and business outlets for Labor/Job Market. Accept any outlet with genuine
-   editorial standards. Reject only tabloids, clickbait, sponsored content, and sites with
-   no journalistic accountability. Do NOT reject an article solely because the outlet is
-   smaller or niche — relevance and credibility for the specific topic matter more than brand.
+{source_rule}
 
 ARTICLES:
 {articles_text}
@@ -185,14 +217,22 @@ JSON array ONLY — no explanation."""
 def fetch_all_topics(client) -> list:
     """Fetch and select stories for all topics. Returns list of topic dicts."""
     print("📡 Fetching stories from trusted sources...")
+    seen_urls  = load_seen_urls()
     topics_data = []
 
     for topic in RAW_TOPICS:
         topic_name = get_topic_name(topic)
         articles   = fetch_articles_for_topic(topic)
 
+        # Remove articles already published in a previous digest
+        fresh = [a for a in articles if a.get("url") not in seen_urls]
+        dupes = len(articles) - len(fresh)
+        if dupes:
+            print(f"  🔄 [{topic_name}] Skipped {dupes} duplicate(s) already in memory")
+        articles = fresh
+
         if not articles:
-            print(f"  ⚠️  Skipping [{topic_name}] — no articles found")
+            print(f"  ⚠️  Skipping [{topic_name}] — no fresh articles found")
             continue
 
         selected = select_top_stories(topic, articles, client)

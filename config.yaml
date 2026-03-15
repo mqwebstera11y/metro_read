@@ -38,6 +38,7 @@ topics:
       - "AI compliance"
 
   - name: "Religion & Belief in the Age of AI"
+    content_match_priority: true   # source quality is secondary; content relevance is all that matters
     description: >
       How religious institutions, faith communities, and belief systems are responding
       to the rise of AI — from official positions by the Vatican, Islamic scholars,
