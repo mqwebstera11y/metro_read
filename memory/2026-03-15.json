@@ -5,27 +5,52 @@
       "topic": "Global AI Governance",
       "stories": [
         {
-          "title": "Show HN: Open-Source EU AI Act Compliance Scanning for CI/CD",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47376869"
-        },
-        {
           "title": "US gov't revokes controversial AI hardware export rule that would mandate investments from foreign companies \u2014 new export rules are still in the works, though",
           "source": "Tom's Hardware UK",
           "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/us-govt-revokes-controversial-ai-hardware-export-rule-that-would-mandate-investments-from-foreign-companies-new-export-rules-are-still-in-the-works-though"
+        },
+        {
+          "title": "The 2026 farm bill quietly hands big tech control over American farmland. Here\u2019s the fine print",
+          "source": "Fortune",
+          "url": "https://fortune.com/2026/03/14/farm-bill-2026-big-tech-ai-precision-agriculture-eqip-subsidy/"
+        },
+        {
+          "title": "Tech bills of the week: Improved biological data for research; Section 702 reform; and more",
+          "source": "Nextgov",
+          "url": "https://www.nextgov.com/policy/2026/03/tech-bills-week-improved-biological-data-research-section-702-reform-and-more/412121/"
         }
       ]
     },
     {
-      "topic": "Governments & AI Impact on Society",
+      "topic": "Future of Pedagogy & Education",
       "stories": [
         {
-          "title": "Top brass in China reaffirm goal to be world leaders in tech, AI",
-          "source": "Nature.com",
-          "url": "https://www.nature.com/articles/d41586-026-00814-3"
+          "title": "Professors Say AI Is Destroying Their Students\u2019 Ability to Think",
+          "source": "Futurism",
+          "url": "http://futurism.com/artificial-intelligence/professors-ai-destroying-students-thinking"
+        }
+      ]
+    },
+    {
+      "topic": "AI & the Job Market",
+      "stories": [
+        {
+          "title": "I spent 17 hours at a legal conference. These were the two questions haunting lawyers about AI.",
+          "source": "Business Insider",
+          "url": "https://www.businessinsider.com/inside-legalweek-2026-ai-adoption-lawyers-law-firms-2026-3"
+        },
+        {
+          "title": "Andrew Yang says we should stop taxing workers \u2014 and start taxing AI",
+          "source": "Business Insider",
+          "url": "https://www.businessinsider.com/andrew-yang-says-stop-taxing-workers-start-taxing-ai-2026-3"
+        },
+        {
+          "title": "Young people find digital marketing \"meh\" - and that's the industry's real problem",
+          "source": "Ppc.land",
+          "url": "https://ppc.land/young-people-find-digital-marketing-meh-and-thats-the-industrys-real-problem/"
         }
       ]
     }
   ],
-  "synthesis": "# What This Means for Human Dignity & Labor\n\nAI governance is consolidating power over labor outcomes in the hands of those who control compliance infrastructure and hardware access, rather than democratizing decisions about worker displacement. The EU AI Act compliance scanner embeds regulatory authority directly into developers' CI/CD pipelines, meaning private tool-builders now mediate what the state legally permits\u2014bypassing parliamentary scrutiny of labor protections embedded in code. Simultaneously, the U.S. hardware export reversal demonstrates that nations unable to build sovereign AI infrastructure capacity will have labor-market decisions shaped by foreign capital flows and geopolitical leverage rather than domestic democratic processes.\n\nToday's news COMPLICATES the shift toward intrinsic human worth by concentrating both the *technical* and *economic* power to define whose labor remains valuable. Watch China's implementation of its state AI leadership commitment: specifically, whether the next 18 months produce a public social-contract framework addressing worker displacement, or whether \"AI leadership\" proceeds as a purely productive/competitive goal with labor costs absorbed by workers and welfare systems bearing the adjustment burden."
+  "synthesis": "# What This Means for Human Dignity & Labor\n\nThe U.S. government and private sector are simultaneously abandoning the infrastructure that historically linked human effort to economic value and social protection. The U.S. revoked explicit hardware export controls while the 2026 farm bill delegates AI governance to private vendors rather than public agencies\u2014both moves that dissolve the state's capacity to mediate automation's distributional impacts. Meanwhile, professors report that AI is decoupling demonstrated intellectual competence from credential attainment within the learning process itself, collapsing the confidence that effort-based mastery produces verifiable knowledge.\n\nToday's news **accelerates** the shift away from performance-based identity toward a world where work and credentials no longer reliably generate dignity or social membership. Watch the 2026 farm bill's implementation in agricultural labor markets: if AI deployment proceeds without public oversight mechanisms, and rural workers experience displacement without corresponding retraining or income protection, the political coalition required to fund alternative social contracts through AI taxation (Yang's proposal) will have already fractured along geographic and sectoral lines."
 }
