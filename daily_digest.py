@@ -1,9 +1,9 @@
 """
 Daily News Digest v5
-- Five stories per topic (past 24 hours, trusted sources only)
-- Claude selects most relevant articles from fetched pool
+- Up to 3 stories per topic (past 24-72 hours, open search + Claude quality filter)
+- Two-stage relevance gate: strict selection prompt + NOT_RELEVANT post-analysis filter
 - Each story: What Happened + What the Source Said + AI Interpretation + Plain English
-- Final section: AI synthesis that directly references story content
+- AI Synthesis and Weekly Reflection: thesis-first, 2 paragraphs, story-grounded
 """
 
 import os
@@ -134,28 +134,30 @@ def select_top_stories(topic, articles: list, client) -> list:
         for i, a in enumerate(articles)
     )
 
-    prompt = f"""You are a news curator. Select the {STORIES_PER_TOPIC} best articles for this topic.
+    prompt = f"""You are a news curator. Select up to {STORIES_PER_TOPIC} articles that DIRECTLY address this topic.
 
 TOPIC: {topic_name}
 DESCRIPTION: {topic_desc}
 
-SELECTION RULES — all must be met for an article to qualify:
-1. Directly and substantively relevant to the topic — not tangentially related
-2. Has policy depth, expert analysis, institutional significance, or meaningful data
-3. Not a product announcement, software release, personal blog, or local story without broader significance
-4. The source and content clearly connect to the topic's core concern
-5. SOURCE QUALITY: Strongly prefer established news organizations (Reuters, AP, BBC, NYT,
-   Guardian, Washington Post, Bloomberg, FT, WSJ, Economist, NPR, Atlantic, Axios, Politico,
-   MIT Technology Review). Reject clickbait sites, sponsored content, and low-credibility outlets.
+SELECTION RULES — every article must clear ALL of these:
+1. STRICT RELEVANCE: The article must be substantively about {topic_name} — not just an AI article
+   that tangentially touches the theme. If the topic is religion and AI, the article must be
+   about religion, faith communities, or belief systems engaging with AI — not generic AI news.
+2. Has policy depth, expert analysis, institutional significance, or concrete data.
+3. Not a product launch, software release, personal blog, or purely local story.
+4. SOURCE QUALITY: Prefer Reuters, AP, BBC, NYT, Guardian, Washington Post, Bloomberg, FT,
+   WSJ, Economist, NPR, Atlantic, Axios, Politico, MIT Technology Review. Reject clickbait,
+   sponsored content, and low-credibility outlets.
+
+ZERO TOLERANCE: Any article that does not directly address {topic_name} must be excluded,
+even if it mentions AI. It is better to return [] than to include off-topic articles.
 
 ARTICLES:
 {articles_text}
 
-Reply ONLY with a JSON array of indices (numbers) for the {STORIES_PER_TOPIC} best articles.
-Order them best-first. Example: [3, 0, 7, 2, 5]
-If fewer than {STORIES_PER_TOPIC} qualify, return only the qualifying indices.
-If none qualify, return [].
-Reply with the JSON array ONLY — no explanation."""
+Reply ONLY with a JSON array of indices for qualifying articles, best-first. Example: [3, 0, 2]
+If fewer qualify, return only those. If none qualify, return [].
+JSON array ONLY — no explanation."""
 
     try:
         message = client.messages.create(
@@ -164,18 +166,17 @@ Reply with the JSON array ONLY — no explanation."""
             messages=[{"role": "user", "content": prompt}]
         )
         raw = message.content[0].text.strip()
-        # Extract JSON array even if there's surrounding text
         match = re.search(r'\[[\d,\s]*\]', raw)
         if match:
             indices = json.loads(match.group())
-            selected = [articles[i] for i in indices if isinstance(i, int) and i < len(articles)]
-            if selected:
-                return selected
+            # Return exactly what Claude decided — including empty list
+            return [articles[i] for i in indices if isinstance(i, int) and i < len(articles)]
     except Exception as e:
+        # Only fall back to first N on API failure, not on Claude returning []
         print(f"    Selection error for [{topic_name}]: {e}")
+        return articles[:STORIES_PER_TOPIC]
 
-    # Fallback: return first N articles
-    return articles[:STORIES_PER_TOPIC]
+    return []
 
 
 def fetch_all_topics(client) -> list:
@@ -245,7 +246,7 @@ Respond ONLY with valid JSON, no markdown, no extra text:
 {{
   "who_did_what": "1-2 sentences. Who, what, when, where — facts only.",
   "source_comments": "1 sentence. What angle did {story['source']} take — what did they emphasize or downplay?",
-  "ai_interpretation": "1 sharp sentence. What does this actually mean for {story['topic_name']}? No hedging.",
+  "ai_interpretation": "1 decisive sentence starting directly with the impact on {story['topic_name']} — no 'this means', no hedging. If the story has zero genuine connection to {story['topic_name']}, write exactly: NOT_RELEVANT",
   "plain_explanation": "1-2 sentences. The bigger picture for someone unfamiliar with the topic."
 }}"""
 
@@ -292,16 +293,18 @@ def generate_synthesis(topics_data: list, client) -> str:
 
 {all_content}
 
-Write a tight synthesis: "What This Means for Human Dignity & Labor"
+Write a synthesis titled "What This Means for Human Dignity & Labor".
 
 RULES:
-- 3 paragraphs maximum. Short sentences. No filler.
-- Name specific actors and stories — no generic "AI is changing society" statements.
-- Paragraph 1: The sharpest cross-topic pattern you see today.
-- Paragraph 2: Does today's news ACCELERATE, RESIST, or COMPLICATE the shift from
-  performance-based identity to intrinsic human worth? Give one concrete reason.
-- Paragraph 3: One thing to watch next. Make it specific and actionable.
-- Every sentence must earn its place. Cut anything vague."""
+- 2 short paragraphs, 3 sentences each. No filler, no transitions, no preamble.
+- Use the stories above as evidence — name specific actors, policies, and events.
+  Never write "AI is changing society" or other generic statements.
+- Paragraph 1: Open with ONE cross-topic thesis — the single pattern connecting today's stories.
+  Follow with two sentences citing specific actors/events as evidence for that thesis.
+- Paragraph 2: In one sentence, state whether today's news ACCELERATES, RESISTS, or COMPLICATES
+  the shift from performance-based identity to intrinsic human worth. Then name the one specific
+  thing to watch next — concrete actor, deadline, or decision point.
+- Every sentence must either add a new fact or advance the argument. Cut anything else."""
 
     message = client.messages.create(
         model="claude-haiku-4-5-20251001",
@@ -321,6 +324,19 @@ def analyze_all_topics(topics_data: list, client) -> tuple:
         for i, story in enumerate(td["stories"], 1):
             print(f"  → [{topic_name}] Story {i}/{len(td['stories'])}...")
             story["analysis"] = analyze_story(story, client)
+
+        # Drop stories Claude flagged as having no genuine connection to the topic
+        before = len(td["stories"])
+        td["stories"] = [
+            s for s in td["stories"]
+            if s.get("analysis", {}).get("ai_interpretation", "").strip() != "NOT_RELEVANT"
+        ]
+        dropped = before - len(td["stories"])
+        if dropped:
+            print(f"  ✂️  [{topic_name}] Dropped {dropped} irrelevant story(s) after analysis")
+
+    # Remove topics where all stories were filtered out
+    topics_data = [td for td in topics_data if td["stories"]]
 
     print("  → Generating synthesis...")
     synthesis = generate_synthesis(topics_data, client)
@@ -391,13 +407,19 @@ def generate_weekly_reflection(client) -> str:
 
     message = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=1000,
-        messages=[{"role": "user", "content": f"""Review this week's top stories and write a short weekly reflection.
-Plain English. 3–4 paragraphs. Focus on the week's arc — what changed, what stayed the same,
-and what it means for human dignity and labor in the age of AI.
+        max_tokens=500,
+        messages=[{"role": "user", "content": f"""Write a weekly reflection on these AI stories.
 
 THIS WEEK'S STORIES:
-{week_text}"""}]
+{week_text}
+
+RULES:
+- 2 short paragraphs, 3-4 sentences each. No preamble, no filler.
+- Paragraph 1: ONE thesis about the week's defining arc. Back it immediately with
+  2-3 specific stories/actors from the list as evidence. No generalities.
+- Paragraph 2: What concretely changed vs. stayed the same this week. End with
+  one precise implication for human dignity or labor — name a specific actor or trend.
+- Write for a reader who already saw the daily digests. Add meaning, not recap."""}]
     )
     return message.content[0].text.strip()
 
