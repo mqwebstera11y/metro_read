@@ -39,6 +39,7 @@ topics:
 
   - name: "Religion & Belief in the Age of AI"
     content_match_priority: true   # source quality is secondary; content relevance is all that matters
+    extended_lookback_hours: 168   # 7-day fallback — religion coverage is sparse; cast a wide net
     description: >
       How religious institutions, faith communities, and belief systems are responding
       to the rise of AI — from official positions by the Vatican, Islamic scholars,
@@ -48,15 +49,22 @@ topics:
       Prioritize concrete institutional positions and community responses over abstract
       academic ethics papers.
     keywords:
-      - '"artificial intelligence" religion'
-      - '"artificial intelligence" faith'
-      - '"artificial intelligence" church'
-      - '"artificial intelligence" Vatican'
-      - '"artificial intelligence" religious'
-      - '"artificial intelligence" spiritual'
-      - '"artificial intelligence" theology'
-      - "AI spirituality"
       - "AI religion"
+      - "AI faith"
+      - "AI church"
+      - "AI theology"
+      - "AI Vatican"
+      - "AI spiritual"
+      - "AI pastor"
+      - "AI prayer"
+      - "AI mosque"
+      - "AI Buddhism"
+      - "AI Islam"
+      - "AI Christianity"
+      - "artificial intelligence religion"
+      - "artificial intelligence faith"
+      - "artificial intelligence church"
+      - "artificial intelligence theology"
 
   - name: "Future of Pedagogy & Education"
     description: >

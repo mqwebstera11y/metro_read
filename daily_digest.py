@@ -87,56 +87,69 @@ def load_seen_urls(days: int = 10) -> set:
 # STEP 1: FETCH ARTICLES FROM TRUSTED SOURCES
 # ─────────────────────────────────────────────
 
+def _topic_lookback_windows(topic) -> list:
+    """Return the list of lookback windows (hours) to try for this topic."""
+    extended = (topic.get("extended_lookback_hours") if isinstance(topic, dict) else None)
+    windows = [24, 96]
+    if extended and extended not in windows:
+        windows.append(extended)
+    return windows
+
+
 def fetch_articles_for_topic(topic) -> list:
-    """Fetch up to 20 candidate articles from trusted sources within 24h (72h fallback)."""
+    """Fetch candidate articles from NewsAPI for a topic, trying progressively wider windows."""
     topic_name = get_topic_name(topic)
     keywords   = get_topic_keywords(topic)
 
-    # Use keywords as-is (already short single-concept terms in config)
-    terms = [kw.strip() for kw in keywords[:8]]
-    query = " OR ".join(terms)
-    print(f"    Query: {query}")
+    # Split long keyword lists into batches of 8 (NewsAPI silently truncates very long queries)
+    kw_batches = [keywords[i:i+8] for i in range(0, min(len(keywords), 32), 8)]
 
-    for hours_back in [24, 96]:
-        try:
-            params = {
-                "q":        query,
-                "language": "en",
-                "sortBy":   "publishedAt",
-                "pageSize": 100,
-                "from":     (datetime.now() - timedelta(hours=hours_back)).strftime("%Y-%m-%dT%H:%M:%S"),
-            }
-            # No domain filter here — niche topics get zero results when constrained.
-            # Source quality is enforced by Claude during selection below.
+    for hours_back in _topic_lookback_windows(topic):
+        seen_in_window: dict = {}
+        from_dt = (datetime.now() - timedelta(hours=hours_back)).strftime("%Y-%m-%dT%H:%M:%S")
+        api_error = False
 
-            response = requests.get(
-                "https://newsapi.org/v2/everything",
-                params=params,
-                headers={"X-Api-Key": NEWS_API_KEY},
-                timeout=10,
-            )
-            data = response.json()
-
-            if data.get("status") != "ok":
-                print(f"  NewsAPI error for [{topic_name}]: {data.get('message')}")
+        for batch in kw_batches:
+            query = " OR ".join(b.strip() for b in batch)
+            print(f"    [{topic_name}] Query ({hours_back}h): {query}")
+            try:
+                response = requests.get(
+                    "https://newsapi.org/v2/everything",
+                    params={
+                        "q":        query,
+                        "language": "en",
+                        "sortBy":   "publishedAt",
+                        "pageSize": 100,
+                        "from":     from_dt,
+                    },
+                    headers={"X-Api-Key": NEWS_API_KEY},
+                    timeout=10,
+                )
+                data = response.json()
+                if data.get("status") != "ok":
+                    print(f"  NewsAPI error for [{topic_name}]: {data.get('message')}")
+                    api_error = True
+                    break
+                for a in data.get("articles", []):
+                    url = a.get("url", "")
+                    if (url and url not in seen_in_window
+                            and a.get("title") and a.get("title") != "[Removed]"
+                            and a.get("description")):
+                        seen_in_window[url] = a
+            except Exception as e:
+                print(f"  Failed to fetch [{topic_name}]: {e}")
+                api_error = True
                 break
 
-            articles = [
-                a for a in data.get("articles", [])
-                if a.get("title") and a.get("title") != "[Removed]"
-                and a.get("description")
-            ]
-
-            if articles:
-                label = f"{hours_back}h"
-                print(f"  [{topic_name}] {len(articles)} candidates ({label})")
-                return articles
-            elif hours_back == 24:
-                print(f"  [{topic_name}] Nothing in 24h, trying 96h...")
-
-        except Exception as e:
-            print(f"  Failed to fetch [{topic_name}]: {e}")
+        if api_error:
             break
+
+        if seen_in_window:
+            articles = list(seen_in_window.values())
+            print(f"  [{topic_name}] {len(articles)} candidates ({hours_back}h)")
+            return articles
+
+        print(f"  [{topic_name}] Nothing in {hours_back}h, trying wider window...")
 
     print(f"  [{topic_name}] No articles found.")
     return []
