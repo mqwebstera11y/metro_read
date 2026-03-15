@@ -79,11 +79,11 @@ def fetch_articles_for_topic(topic) -> list:
                 "q":        query,
                 "language": "en",
                 "sortBy":   "publishedAt",
-                "pageSize": 20,
+                "pageSize": 100,
                 "from":     (datetime.now() - timedelta(hours=hours_back)).strftime("%Y-%m-%dT%H:%M:%S"),
             }
-            if TRUSTED_DOMAINS:
-                params["domains"] = TRUSTED_DOMAINS
+            # No domain filter here — niche topics get zero results when constrained.
+            # Source quality is enforced by Claude during selection below.
 
             response = requests.get(
                 "https://newsapi.org/v2/everything",
@@ -144,6 +144,9 @@ SELECTION RULES — all must be met for an article to qualify:
 2. Has policy depth, expert analysis, institutional significance, or meaningful data
 3. Not a product announcement, software release, personal blog, or local story without broader significance
 4. The source and content clearly connect to the topic's core concern
+5. SOURCE QUALITY: Strongly prefer established news organizations (Reuters, AP, BBC, NYT,
+   Guardian, Washington Post, Bloomberg, FT, WSJ, Economist, NPR, Atlantic, Axios, Politico,
+   MIT Technology Review). Reject clickbait sites, sponsored content, and low-credibility outlets.
 
 ARTICLES:
 {articles_text}
@@ -372,14 +375,16 @@ def generate_weekly_reflection(client) -> str:
     lines = []
     for d in week_data:
         day_lines = [d["date"] + ":"]
-        # Support both new format (topics[].stories[]) and old format (stories[])
         for entry in d.get("topics", []):
-            topic = entry.get("topic", "")
-            titles = "; ".join(s["title"] for s in entry.get("stories", []))
-            day_lines.append(f"  [{topic}] {titles}")
-        if not d.get("topics"):
+            if isinstance(entry, dict):
+                topic  = entry.get("topic", "")
+                titles = "; ".join(s["title"] for s in entry.get("stories", []))
+                day_lines.append(f"  [{topic}] {titles}")
+            # old format: topics was a list of plain strings (topic names only)
+        if not d.get("topics") or not isinstance(d["topics"][0], dict):
             for s in d.get("stories", []):
-                day_lines.append(f"  [{s.get('topic','')}] {s.get('title','')}")
+                if isinstance(s, dict):
+                    day_lines.append(f"  [{s.get('topic','')}] {s.get('title','')}")
         lines.append("\n".join(day_lines))
 
     week_text = "\n\n".join(lines)
