@@ -1,76 +1,21 @@
 {
   "date": "2026-03-15",
-  "topics": [
+  "stories": [
     {
       "topic": "Global AI Governance",
-      "stories": [
-        {
-          "title": "US gov't revokes controversial AI hardware export rule that would mandate investments from foreign companies \u2014 new export rules are still in the works, though",
-          "source": "Tom's Hardware UK",
-          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/us-govt-revokes-controversial-ai-hardware-export-rule-that-would-mandate-investments-from-foreign-companies-new-export-rules-are-still-in-the-works-though"
-        },
-        {
-          "title": "The 2026 farm bill quietly hands big tech control over American farmland. Here\u2019s the fine print",
-          "source": "Fortune",
-          "url": "https://fortune.com/2026/03/14/farm-bill-2026-big-tech-ai-precision-agriculture-eqip-subsidy/"
-        },
-        {
-          "title": "Show HN: Open-Source EU AI Act Compliance Scanning for CI/CD",
-          "source": "Hacker News",
-          "url": "https://news.ycombinator.com/item?id=47376869"
-        }
-      ]
-    },
-    {
-      "topic": "Religion & Belief in the Age of AI",
-      "stories": [
-        {
-          "title": "AI Watch, Pt. 1",
-          "source": "Patheos",
-          "url": "https://www.patheos.com/blogs/geneveith/2026/03/ai-watch-pt-1/"
-        }
-      ]
+      "title": "The 2026 farm bill quietly hands big tech control over American farmland. Here\u2019s the fine print",
+      "url": "https://fortune.com/2026/03/14/farm-bill-2026-big-tech-ai-precision-agriculture-eqip-subsidy/"
     },
     {
       "topic": "Future of Pedagogy & Education",
-      "stories": [
-        {
-          "title": "Nanyang Business School retools its degree for the AI age",
-          "source": "CNA",
-          "url": "https://www.channelnewsasia.com/brand-studio/nanyang-business-school-retools-its-degree-ai-age-5988056"
-        },
-        {
-          "title": "A PhD is an apprenticeship in research \u2013 we can\u2019t let AI take that away",
-          "source": "The Conversation Africa",
-          "url": "https://theconversation.com/a-phd-is-an-apprenticeship-in-research-we-cant-let-ai-take-that-away-277486"
-        },
-        {
-          "title": "Professors Say AI Is Destroying Their Students\u2019 Ability to Think",
-          "source": "Futurism",
-          "url": "http://futurism.com/artificial-intelligence/professors-ai-destroying-students-thinking"
-        }
-      ]
+      "title": "wafer-ai 0.0.87",
+      "url": "https://pypi.org/project/wafer-ai/0.0.87/"
     },
     {
-      "topic": "AI & the Job Market",
-      "stories": [
-        {
-          "title": "Andrew Yang says we should stop taxing workers \u2014 and start taxing AI",
-          "source": "Business Insider",
-          "url": "https://www.businessinsider.com/andrew-yang-says-stop-taxing-workers-start-taxing-ai-2026-3"
-        },
-        {
-          "title": "I spent 17 hours at a legal conference. These were the two questions haunting lawyers about AI.",
-          "source": "Business Insider",
-          "url": "https://www.businessinsider.com/inside-legalweek-2026-ai-adoption-lawyers-law-firms-2026-3"
-        },
-        {
-          "title": "Young people find digital marketing \"meh\" - and that's the industry's real problem",
-          "source": "Ppc.land",
-          "url": "https://ppc.land/young-people-find-digital-marketing-meh-and-thats-the-industrys-real-problem/"
-        }
-      ]
+      "topic": "Socio-Economic Policy & Labor Impact",
+      "title": "SVCV (SVCV Global) TO LAUNCH IN LATE 2026 AS A GLOBAL CONGLOMERATE",
+      "url": "https://www.globenewswire.com/news-release/2026/03/14/3255857/0/en/SVCV-SVCV-Global-TO-LAUNCH-IN-LATE-2026-AS-A-GLOBAL-CONGLOMERATE.html"
     }
   ],
-  "synthesis": "# What This Means for Human Dignity & Labor\n\nAcross governance, education, and labor markets, institutions are systematically abandoning the fiction that human value derives from measurable economic output. The U.S. Department of Commerce retreated from using AI hardware export controls as coercive leverage\u2014replacing unilateral productivity maximization with negotiation\u2014while simultaneously, universities like Nanyang Business School are restructuring degrees away from \"demonstrable technical mastery\" toward unmeasurable soft competencies like \"global perspective,\" signaling that institutions no longer believe they can compete on productivity grounds. Andrew Yang's proposal to tax AI rather than workers names the core admission: the fiscal architecture treating labor as the primary value generator has become incoherent, forcing a choice between redesigning taxation around non-work citizenship or watching the social contract collapse.\n\nToday's news COMPLICATES rather than cleanly advances dignity-based frameworks, because the pressure is creating a two-tier system where the well-resourced escape displacement through upskilling while the vulnerable are abandoned to opaque algorithmic infrastructure. Watch the 2026 farm bill's implementation: if Big Tech vendors establish unaccountable standard-setting authority over agricultural governance without public auditing capacity, it will demonstrate whether the fragmentation of regulatory authority can be arrested before human labor becomes categorically unmoored from both economic necessity and social legitimacy."
+  "synthesis": "# What This Means for Human Dignity & Labor\n\nToday's stories reveal an acceleration toward a world where human economic value is decoupling from what we *do*. The farm bill essentially pays farmers to adopt tools that reduce their functional necessity. Meanwhile, conglomerate-building initiatives and AI development frameworks suggest the economy is optimizing around technological capability, not human capability. The pattern is clear: we're moving faster toward a system where jobs\u2014and the identity tied to them\u2014matter less to survival.\n\nThis shift could go two ways, and the stories are ambiguous about which path we're actually taking. One version leads somewhere humane: if we acknowledge that AI will displace labor, we could use this moment to decouple income, healthcare, and dignity from employment. The other is darker: corporate interests write the rules (as the farm bill suggests), and humans become managed populations dependent on whatever terms Big Tech and investment groups set. The silence around worker agency in these announcements is telling.\n\nThe real risk isn't automation itself\u2014it's that we're automating *before* we've built the social architecture to support people whose labor is no longer economically necessary. If you work in agriculture, education, or any sector touched by these initiatives, the concrete action is urgent: start asking your representatives now whether they're building a future where non-workers have dignity, or just a future where non-workers have nothing."
 }
