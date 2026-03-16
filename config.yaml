@@ -5,6 +5,10 @@
 # ─────────────────────────────────────────────
 
 
+# ── HOW MANY STORIES PER TOPIC ─────────────────
+stories_per_topic: 3
+
+
 # ── TOPICS ────────────────────────────────────
 # Each topic has three parts:
 #   name:        Short label used in email headers
@@ -15,68 +19,96 @@ topics:
 
   - name: "Global AI Governance"
     description: >
-      The evolution of international legal frameworks, regulatory standards,
-      and institutional structures governing AI development, deployment, and accountability
-      across nation-states and multilateral bodies.
+      The evolution of legal frameworks, regulatory standards, and institutional structures
+      governing AI development, deployment, and accountability — from national legislation
+      and sector-specific policies to international treaties and multilateral standards bodies.
+      Includes government agencies, parliamentary debates, regulatory rulings, and institutional
+      voices (unions, professional bodies, civil society) responding to AI governance gaps.
+      National-level policy stories are in scope, not just multilateral agreements.
     keywords:
       - "AI regulation"
       - "AI governance"
       - "AI policy"
       - "AI law"
-      - "artificial intelligence act"
       - "AI oversight"
-      - "AI treaty"
+      - "AI legislation"
+      - "AI rules"
       - "AI standards"
+      - "AI framework"
+      - "AI compliance"
 
-  - name: "Theological & Religious Ethics of AI"
+  - name: "Religion & Belief in the Age of AI"
+    content_match_priority: true   # source quality is secondary; content relevance is all that matters
+    extended_lookback_hours: 168   # 7-day fallback — religion coverage is sparse; cast a wide net
     description: >
-      Diverse religious traditions and moral philosophies engaging with the
-      ethical, spiritual, and anthropological implications of artificial intelligence —
-      including questions of consciousness, soul, moral agency, and what it means
-      to be human in an age of intelligent machines.
+      How religious institutions, faith communities, and belief systems are responding
+      to the rise of AI — from official positions by the Vatican, Islamic scholars,
+      Buddhist leaders, and Protestant denominations, to grassroots believers grappling
+      with AI replacing prayer, pastoral care, or moral guidance. Also covers secular
+      philosophical and humanist voices on whether AI challenges what makes us human.
+      Prioritize concrete institutional positions and community responses over abstract
+      academic ethics papers.
     keywords:
-      - "religion artificial intelligence"
-      - "AI ethics religion"
-      - "AI morality"
-      - "faith and technology"
-      - "AI human dignity"
-      - "AI consciousness"
-      - "theology technology"
+      - "AI religion"
+      - "AI faith"
+      - "AI church"
+      - "AI theology"
+      - "AI Vatican"
       - "AI spiritual"
+      - "AI pastor"
+      - "AI prayer"
+      - "AI mosque"
+      - "AI Buddhism"
+      - "AI Islam"
+      - "AI Christianity"
+      - "artificial intelligence religion"
+      - "artificial intelligence faith"
+      - "artificial intelligence church"
+      - "artificial intelligence theology"
 
   - name: "Future of Pedagogy & Education"
     description: >
-      Academic leadership's vision for transforming educational models, assessment
-      frameworks, and merit-based reward systems as AI challenges traditional
-      notions of knowledge, skill acquisition, authorship, and intellectual labor.
+      How AI is transforming education — both as a disruptive force breaking the link
+      between effort and credentials (students using AI for assignments, academic integrity
+      crises, degree value erosion) and as a systemic shift in how knowledge is taught,
+      assessed, and certified. Focus on: schools and universities responding to AI,
+      whether traditional qualifications still signal real knowledge, what "learning" means
+      when AI can produce indistinguishable output, and AI's structural impact on pedagogy.
+      Reject software product launches and generic EdTech marketing stories.
     keywords:
       - "AI education"
-      - "AI classroom"
+      - "AI students"
+      - "AI school"
       - "AI university"
-      - "future of learning"
-      - "AI academic"
-      - "AI student"
-      - "AI teaching"
-      - "higher education AI"
-      - "AI curriculum"
+      - "AI classroom"
+      - "AI teacher"
+      - "AI learning"
+      - "AI cheating"
+      - "AI academic integrity"
+      - "AI degree"
 
-  - name: "Socio-Economic Policy & Labor Impact"
+  - name: "AI & the Job Market"
     description: >
-      Governmental and institutional forecasts regarding AI's systemic impact on
-      labor markets, employment structures, income distribution, fiscal policy,
-      and the long-term stability of national and global economies — with particular
-      attention to how automation decouples productivity from human contribution.
+      Measurable and structural changes in the labor market driven by AI — job openings
+      data, hiring freezes, role eliminations, sector-level displacement, and shifts in
+      which skills employers value. Includes both hard data (BLS, IMF, OECD reports,
+      company layoff announcements) and emerging patterns (AI locking people out of
+      application processes, AI changing demand for humanities/creative skills, "invisible
+      layoffs" where positions simply aren't refilled). Covers the full spectrum: which
+      jobs are disappearing, which are being transformed, and what workers are doing in
+      response.
     keywords:
       - "AI jobs"
-      - "AI unemployment"
-      - "AI labor market"
-      - "AI economy"
-      - "AI automation jobs"
+      - "AI workers"
       - "AI workforce"
-      - "AI income"
-      - "AI fiscal policy"
-      - "AI economic impact"
-      - "universal basic income AI"
+      - "AI layoffs"
+      - "AI hiring"
+      - "AI job market"
+      - "AI unemployment"
+      - "AI automation workers"
+      - "AI skills demand"
+      - "invisible layoff"
+      - "AI replaced"
 
 
 # ── AUDIENCE ──────────────────────────────────
@@ -150,15 +182,29 @@ custom_instructions: |
   - If a story is genuinely alarming, say so plainly. If it is overhyped, say that too.
 
 
-# ── NEWS SOURCES ──────────────────────────────
-# RSS feed URLs — will be replaced by NewsAPI shortly.
-# Keeping these as fallback.
+# ── TRUSTED NEWS SOURCES ───────────────────────
+# Articles from these sources are pre-approved for selection.
+# Sources not on this list may still be accepted if credible for the specific topic
+# (e.g. Vatican News for religion, education journals for pedagogy).
 
-rss_feeds:
-  - "https://feeds.reuters.com/reuters/topNews"
-  - "https://feeds.bbci.co.uk/news/world/rss.xml"
-  - "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-  - "https://feeds.a.dj.com/rss/RSSWorldNews.xml"
+trusted_domains:
+  - "reuters.com"
+  - "apnews.com"
+  - "bbc.com"
+  - "nytimes.com"
+  - "theguardian.com"
+  - "washingtonpost.com"
+  - "politico.com"
+  - "bloomberg.com"
+  - "ft.com"
+  - "wsj.com"
+  - "economist.com"
+  - "npr.org"
+  - "theatlantic.com"
+  - "axios.com"
+  - "technologyreview.com"
+  - "businessinsider.com"
+  - "foxbusiness.com"
 
 
 # ── EMAIL SETTINGS ────────────────────────────
