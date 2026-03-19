@@ -1,0 +1,86 @@
+{
+  "date": "2026-03-19",
+  "topics": [
+    {
+      "topic": "Global AI Governance",
+      "stories": [
+        {
+          "title": "CAISI signs MOU with GSA to boost AI evaluation science in federal procurement through USAi",
+          "source": "Nist.gov",
+          "url": "https://www.nist.gov/news-events/news/2026/03/caisi-signs-mou-gsa-boost-ai-evaluation-science-federal-procurement-through"
+        },
+        {
+          "title": "NTIA switches funding focus to AI-RAN",
+          "source": "TelecomTV",
+          "url": "https://www.telecomtv.com/content/ai/ntia-switches-funding-focus-to-ai-ran-55108/"
+        },
+        {
+          "title": "Nvidia Debuts Platform for Enterprise AI Agents",
+          "source": "pymnts.com",
+          "url": "https://www.pymnts.com/artificial-intelligence-2/2026/nvidia-debuts-platform-for-enterprise-ai-agents/"
+        }
+      ]
+    },
+    {
+      "topic": "Religion & Belief in the Age of AI",
+      "stories": [
+        {
+          "title": "Preach from the heart, not with AI-generated homilies, priest says",
+          "source": "Ewtnnews.com",
+          "url": "https://www.ewtnnews.com/world/americas/preach-from-the-heart-not-with-ai-generated-homilies-priest-says"
+        },
+        {
+          "title": "AI still too inaccurate when it comes to Scripture, says YouVersion founder",
+          "source": "Christiandaily.com",
+          "url": "https://www.christiandaily.com/news/ais-scripture-problem-misquotes-range-from-15-to-60-says-youversion-ceo"
+        },
+        {
+          "title": "Wise and Helpful Ways for Christians To Experiment With AI",
+          "source": "Challies.com",
+          "url": "https://www.challies.com/articles/wise-and-helpful-ways-for-christians-to-experiment-with-ai/"
+        }
+      ]
+    },
+    {
+      "topic": "Future of Pedagogy & Education",
+      "stories": [
+        {
+          "title": "Student Use of AI for Homework Rises as Concerns Grow About Critical Thinking Skills",
+          "source": "Rand.org",
+          "url": "https://www.rand.org/news/press/2026/03/student-use-of-ai-for-homework-rises-as-concerns-grow.html"
+        },
+        {
+          "title": "Writing Faculty Push for the Right to Refuse AI",
+          "source": "Inside Higher Ed",
+          "url": "https://www.insidehighered.com/news/tech-innovation/teaching-learning/2026/03/16/writing-faculty-push-right-refuse-ai"
+        },
+        {
+          "title": "A writing professor\u2019s new task in the age of AI: Teaching students when to struggle",
+          "source": "The Conversation Africa",
+          "url": "https://theconversation.com/a-writing-professors-new-task-in-the-age-of-ai-teaching-students-when-to-struggle-276590"
+        }
+      ]
+    },
+    {
+      "topic": "AI & the Job Market",
+      "stories": [
+        {
+          "title": "An OpenAI cofounder \u2018vibe coded\u2019 an analysis of the U.S. labor market\u2019s exposure to AI, and the highest-paying jobs have the worst scores",
+          "source": "Fortune",
+          "url": "https://fortune.com/2026/03/15/andrej-karpathy-openai-cofounder-us-labor-market-exposure-ai-white-collar-jobs-professionals/"
+        },
+        {
+          "title": "The hidden AI risk for workers isn't just unemployment \u2014 it's a pay cut, former Salesforce AI CEO says",
+          "source": "Business Insider",
+          "url": "https://www.businessinsider.com/ai-could-lower-wages-not-just-eliminate-jobs-3-2026"
+        },
+        {
+          "title": "Tech companies are blaming massive layoffs on AI. What\u2019s really going on?",
+          "source": "The Conversation Africa",
+          "url": "https://theconversation.com/tech-companies-are-blaming-massive-layoffs-on-ai-whats-really-going-on-278314"
+        }
+      ]
+    }
+  ],
+  "synthesis": "# What This Means for Human Dignity & Labor\n\nAcross governance, faith, education, and employment, institutions are outsourcing core human functions to AI before establishing whether those functions can be meaningfully automated without destroying their legitimacy. CAISI's MOU with GSA embeds AI evaluation into federal procurement workflows rather than legislative oversight, while Nvidia unilaterally defines \"policy enforcement\" for autonomous agents before governments establish baseline legal standards\u2014both moves that treat technical systems as self-legitimating rather than requiring human authorization. Meanwhile, the U.S. labor market's exposure analysis shows high-income knowledge work faces greater replacement risk than manual labor, and Salesforce's former AI CEO confirms the damage is shifting from unemployment to structural wage depression, meaning workers will retain hollow versions of jobs stripped of their economic and status value.\n\nThis accelerates the decoupling of work from dignity. Watch whether writing faculty at major universities succeed in establishing explicit refusal rights to AI-assisted assessment\u2014that decision will signal whether institutions view human judgment as irreplaceable to credentialing, or whether they've accepted that machines can certify thinking they cannot themselves perform."
+}
