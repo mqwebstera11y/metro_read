@@ -1,0 +1,71 @@
+{
+  "date": "2026-03-22",
+  "topics": [
+    {
+      "topic": "Global AI Governance",
+      "stories": [
+        {
+          "title": "White House releases AI policy framework focused on state regulations, power generation",
+          "source": "SiliconANGLE News",
+          "url": "https://siliconangle.com/2026/03/20/white-house-releases-ai-policy-framework-focused-state-regulations-power-generation/"
+        },
+        {
+          "title": "Trump takes another shot at dismantling state AI regulation",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/898055/trump-new-ai-policy-framework"
+        },
+        {
+          "title": "White House AI Proposal Seeks to Override State Laws, Avoid New Regulator",
+          "source": "Decrypt",
+          "url": "https://decrypt.co/361929/white-house-ai-proposal-override-state-laws-avoid-new-regulator"
+        }
+      ]
+    },
+    {
+      "topic": "Religion & Belief in the Age of AI",
+      "stories": [
+        {
+          "title": "Chapel of Dawn: Netherlands\u2019 AI-Powered Digital Sanctuary Blends Faith and Technology to Make Prayer Accessible 24/7",
+          "source": "Indiancatholicmatters.org",
+          "url": "https://www.indiancatholicmatters.org/chapel-of-dawn-netherlands-ai-powered-digital-sanctuary-blends-faith-and-technology-to-make-prayer-accessible-24-7/"
+        },
+        {
+          "title": "Catholic ethicists file amicus brief backing Anthropic in Pentagon dispute",
+          "source": "Ewtnnews.com",
+          "url": "https://www.ewtnnews.com/world/us/catholic-ethicists-file-amicus-brief-backing-anthropic-in-pentagon-dispute"
+        }
+      ]
+    },
+    {
+      "topic": "Future of Pedagogy & Education",
+      "stories": [
+        {
+          "title": "Will tech writers survive AI? Perspectives from two professors, Nupoor Ranade and Jeremy Merritt",
+          "source": "Idratherbewriting.com",
+          "url": "https://idratherbewriting.com/blog/will-tech-writers-survive-ai-academics-nupoor-jeremy"
+        }
+      ]
+    },
+    {
+      "topic": "AI & the Job Market",
+      "stories": [
+        {
+          "title": "$20 fast food wage upped prices, automation but cut jobs",
+          "source": "CALmatters",
+          "url": "https://calmatters.org/commentary/dan-walters/2026/03/fast-food-wage-california-effects/"
+        },
+        {
+          "title": "What impact is AI having on British firms and the jobs they offer?",
+          "source": "Lse.ac.uk",
+          "url": "https://blogs.lse.ac.uk/businessreview/2026/03/19/what-impact-is-ai-having-on-british-firms-and-the-jobs-they-offer/"
+        },
+        {
+          "title": "How the red-hot AI data center boom is igniting demand for a new, lucrative career path: trade workers",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/03/18/ai-data-center-buildout-jobs-salary-skilled-traders-worker-shortage.html"
+        }
+      ]
+    }
+  ],
+  "synthesis": "# What This Means for Human Dignity & Labor\n\nAcross AI governance, religious practice, education, and labor markets, institutions are outsourcing human relational authority\u2014judgment, presence, witness, expertise\u2014to systems optimized for scalability rather than particularity. The White House's federal preemption strategy dismantles state-level AI accountability mechanisms precisely as the Netherlands' Chapel of Dawn outsources pastoral discernment to algorithms, and as universities cannot justify why students should master disciplines that AI now performs indistinguishably. Both moves treat human expertise and human encounter as inputs to be rationalized away rather than as irreducible goods, collapsing the distinction between what humans uniquely do and what can be delegated to cost-optimized systems.\n\nToday's news **accelerates** the decoupling of human dignity from labor market position and institutional role. Watch whether the AFL-CIO's response to California's $20 minimum wage triggering fast-food automation chains will demand a structural answer\u2014wage floors tied to human presence requirements, or a guaranteed income floor\u2014or whether unions will accept that workers' bargaining power erodes faster than policy can respond."
+}
