@@ -1,0 +1,76 @@
+{
+  "date": "2026-03-25",
+  "topics": [
+    {
+      "topic": "Global AI Governance",
+      "stories": [
+        {
+          "title": "Preemption Isn\u2019t Governance. We Need a Federal Framework for AI.",
+          "source": "Publicknowledge.org",
+          "url": "https://publicknowledge.org/preemption-isnt-governance-we-need-a-federal-framework-for-ai/"
+        },
+        {
+          "title": "U.S. federal AI framework deemed aspirational, noncommittal",
+          "source": "Techtarget.com",
+          "url": "https://www.techtarget.com/searchenterpriseai/news/366640579/US-federal-AI-framework-deemed-aspirational-noncommittal"
+        },
+        {
+          "title": "Who Will Govern AI?",
+          "source": "The American Prospect",
+          "url": "http://prospect.org/2026/03/24/ai-trump-nvidia-china-peter-thiel-anthropic-jake-sullivan/"
+        }
+      ]
+    },
+    {
+      "topic": "Religion & Belief in the Age of AI",
+      "stories": [
+        {
+          "title": "Craig Mod \u2014 Writer + Photographer: [RODEN] Meditation, Language, and LLMs",
+          "source": "Craigmod.com",
+          "url": "https://craigmod.com/roden/112/"
+        }
+      ]
+    },
+    {
+      "topic": "Future of Pedagogy & Education",
+      "stories": [
+        {
+          "title": "NYC schools get AI guidance using \u2018red light, green light\u2019 model",
+          "source": "Gothamist",
+          "url": "https://gothamist.com/news/nyc-schools-get-ai-guidance-using-red-light-green-light-model"
+        },
+        {
+          "title": "Massey University brings back in-person exams to combat AI cheating",
+          "source": "New Zealand Herald",
+          "url": "https://www.nzherald.co.nz/nz/education/massey-university-brings-back-in-person-exams-to-combat-ai-cheating/premium/SSFOG3VAXBB3XAHYPGM6TW72BY/"
+        },
+        {
+          "title": "Postgraduate students\u2019 perceptions of artificial intelligence integration in research: A cross-sectional study",
+          "source": "Plos.org",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0345726"
+        }
+      ]
+    },
+    {
+      "topic": "AI & the Job Market",
+      "stories": [
+        {
+          "title": "Why AI hasn\u2019t caused a job apocalypse \u2014 so far",
+          "source": "Nature.com",
+          "url": "https://www.nature.com/articles/d41586-026-00883-4"
+        },
+        {
+          "title": "Return to office and AI are pulling more women out of work",
+          "source": "Business Insider",
+          "url": "https://www.businessinsider.com/return-to-office-ai-women-out-of-work-moms-2026-3"
+        },
+        {
+          "title": "Billionaire Reddit CEO Steve Huffman says his company will \u2018go heavy\u2019 on hiring graduates because \u2018they\u2019re so much more AI native\u2019 than older peers",
+          "source": "Fortune",
+          "url": "https://fortune.com/2026/03/23/billionaire-reddit-ceo-steve-huffman-go-heavy-hiring-graduates-much-more-ai-native-older-peers/"
+        }
+      ]
+    }
+  ],
+  "synthesis": "**What This Means for Human Dignity & Labor**\n\nAcross governance, education, and employment, institutions are abdicating authority over the terms of AI's social integration, creating conditions where market actors and technological inevitability fill the void that democratic deliberation should occupy. The U.S. federal framework remains \"aspirational, noncommittal\" while Congress\u2014structurally incapable of rapid technical adaptation\u2014defers standard-setting to industry; simultaneously, NYC schools deploy \"red light, green light\" models that preserve grades as compliance signals rather than understanding, and Massey University abandons learning assessment entirely for body surveillance through proctored exams. Reddit CEO Steve Huffman's explicit preference for \"AI native\" graduates and his company's simultaneous shift toward contingent labor demonstrates how the absence of deliberate policy creates self-fulfilling technological sorting: older workers and caregivers are systematically devalued not because AI *requires* this, but because employers choose deployment strategies that externalize women into gig work while selecting younger workers perceived as interchangeable with AI systems.\n\nThis pattern **accelerates** the collapse of performance-based identity into pure contingency, because the institutions nominally responsible for credentialing and labor protection are conceding rather than contesting the terms. Watch whether Congress passes binding AI governance with labor protections and sectoral transition mandates before the 2026 midterm elections\u2014the absence of legislative action by that deadline will confirm that market-driven displacement has become the default outcome, leaving human dignity negotiable rather than foundational."
+}
