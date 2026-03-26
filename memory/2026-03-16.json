@@ -1,21 +1,66 @@
 {
   "date": "2026-03-16",
-  "stories": [
+  "topics": [
     {
       "topic": "Global AI Governance",
-      "title": "Digital shadows over Tokyo: China-linked influence campaign raises alarm in Japan",
-      "url": "https://english.khabarhub.com/2026/15/539458/"
+      "stories": [
+        {
+          "title": "US gov't revokes controversial AI hardware export rule that would mandate investments from foreign companies \u2014 new export rules are still in the works, though",
+          "source": "Tom's Hardware UK",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/us-govt-revokes-controversial-ai-hardware-export-rule-that-would-mandate-investments-from-foreign-companies-new-export-rules-are-still-in-the-works-though"
+        },
+        {
+          "title": "China bans OpenClaw from government computers and issues security guidelines amid adoption frenzy \u2014 nation scrambles to rein in popular AI agent",
+          "source": "Tom's Hardware UK",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/china-bans-openclaw-from-government-computers-and-issues-security-guidelines-amid-adoption-frenzy"
+        },
+        {
+          "title": "Tech bills of the week: Improved biological data for research; Section 702 reform; and more",
+          "source": "Nextgov",
+          "url": "https://www.nextgov.com/policy/2026/03/tech-bills-week-improved-biological-data-research-section-702-reform-and-more/412121/"
+        }
+      ]
     },
     {
       "topic": "Future of Pedagogy & Education",
-      "title": "omega-memory 1.3.0",
-      "url": "https://pypi.org/project/omega-memory/1.3.0/"
+      "stories": [
+        {
+          "title": "Nanyang Business School retools its degree for the AI age",
+          "source": "CNA",
+          "url": "https://www.channelnewsasia.com/brand-studio/nanyang-business-school-retools-its-degree-ai-age-5988056"
+        },
+        {
+          "title": "A PhD is an apprenticeship in research \u2013 we can\u2019t let AI take that away",
+          "source": "The Conversation Africa",
+          "url": "https://theconversation.com/a-phd-is-an-apprenticeship-in-research-we-cant-let-ai-take-that-away-277486"
+        },
+        {
+          "title": "Professors Say AI Is Destroying Their Students\u2019 Ability to Think",
+          "source": "Futurism",
+          "url": "http://futurism.com/artificial-intelligence/professors-ai-destroying-students-thinking"
+        }
+      ]
     },
     {
-      "topic": "Socio-Economic Policy & Labor Impact",
-      "title": "AI comes with a hefty charge. Are you the one who gets stuck with the bill?",
-      "url": "https://www.foxnews.com/opinion/ai-comes-hefty-charge-you-one-who-gets-stuck-bill"
+      "topic": "AI & the Job Market",
+      "stories": [
+        {
+          "title": "75% of resumes never reach a human: the new rules of job searching in the AI era",
+          "source": "Fortune",
+          "url": "https://fortune.com/2026/03/15/ai-hiring-labor-market-workers-career-strategy/"
+        },
+        {
+          "title": "Raghuram Rajan: Will AI spell a job scarcity? It\u2019s time for policymakers to begin scenario planning",
+          "source": "Livemint",
+          "url": "https://www.livemint.com/opinion/online-views/raghuram-rajan-ai-job-scarcity-policymakers-scenario-planning-artificial-intelligence-employment-11773298566007.html"
+        },
+        {
+          "title": "Andrew Yang says we should stop taxing workers \u2014 and start taxing AI",
+          "source": "Business Insider",
+          "url": "https://www.businessinsider.com/andrew-yang-says-stop-taxing-workers-start-taxing-ai-2026-3"
+        }
+      ]
     }
   ],
-  "synthesis": "# What This Means for Human Dignity & Labor\n\nToday's stories reveal a troubling acceleration toward a world where human value becomes detached from what we *do*. AI systems are consolidating economic power (data centers demand unprecedented electricity), political influence (coordinated campaigns bypass direct human debate), and cognitive labor (local AI agents learn and decide independently). Each trend narrows the space where people earn dignity through contribution or agency. The shift is no longer theoretical\u2014it's infrastructure.\n\nYet the stories also expose a fragile moment. The very fact that Japan is *alarmed* by influence operations, that utilities are *warning* about power demands, and that researchers are building *local* AI tools suggests society hasn't surrendered to inevitability. We're still asking questions. But the questions are being asked *after* the systems are built, not before. This matters: the default trajectory favors whoever controls the technology, not whoever needs protection.\n\nThe central tension is stark. If AI handles performance, then human worth must eventually rest on something else\u2014belonging, creativity, care, democratic voice. But these alternatives have never been the basis of economic survival in capitalist systems. We're rushing toward a world that demands we reimagine human value while simultaneously stripping away the institutions (stable jobs, community, political voice) that anchor dignity today. Japan's warning about foreign influence is, in this light, a warning about all of us: when functional contribution fades, the vulnerable become targets.\n\n**Here's what to watch:** Demand transparency from your utility provider about AI energy costs, and from your employer about where AI is being deployed in your role. The concrete question\u2014*who decides what AI does in my community?*\u2014is where intrinsic human dignity gets defended or lost. Performance-based identity is already leaving. The fight now is over whether we shape what comes next."
+  "synthesis": "**What This Means for Human Dignity & Labor**\n\nGovernments and institutions are abandoning the infrastructure that previously translated human effort into verifiable credentials and economic protection, leaving workers exposed to machines that can perform the tasks those credentials were meant to prove. The U.S. revoked its hardware export rule precisely because direct coercion fails when the underlying technology distributes too widely\u2014meanwhile China's OpenClaw ban and resume-screening AI demonstrate that gatekeeping happens downstream, after displacement has already occurred. Schools like Nanyang Business School are explicitly shifting away from \"knowledge transmission\" toward soft skills because they've conceded that AI has already broken the link between study and mastery, while simultaneously, 75% of resumes never reach humans because employers optimize for machine parsing rather than human judgment.\n\nThis news **accelerates** the structural collapse of performance-based identity into pure competitive desperation, with no institution yet offering an alternative basis for dignity or belonging. Watch Andrew Yang's AI tax proposal\u2014specifically whether it gains traction in the 2024 U.S. policy cycle, because it's the only concrete mechanism being debated that would decouple survival from labor output by redirecting the economic incentives that currently make automation cheaper than employment."
 }
